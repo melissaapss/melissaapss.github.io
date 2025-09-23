@@ -1,54 +1,47 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project Alpha — Full Name</title>
-  <link rel="stylesheet" href="assets/css/styles.css" />
-  <meta name="description" content="Project Alpha: interactive web app.">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#project-main">Skip to main content</a>
-  <header class="site-header">
-    <div class="container header-inner">
-      <h1>Project Alpha</h1>
-      <p><a href="index.html">Back to Resume</a></p>
-    </div>
+  <header class="hero">
+    <h1>Project Alpha</h1>
+    <p><a href="index.html">← Back to Resume</a></p>
   </header>
 
-  <main id="project-main" class="container" role="main">
+  <main class="container">
     <article>
-      <h2>Project Alpha — Interactive Web App</h2>
-      <figure>
-        <img src="assets/images/project-alpha.jpg" alt="Screenshot of Project Alpha" />
-        <figcaption>Screenshot of the project's interface</figcaption>
+      <figure class="card">
+        <img src="images/project-alpha.jpg" alt="Screenshot of Project Alpha">
+        <figcaption>Project Alpha — Interactive web app</figcaption>
       </figure>
 
       <section>
-        <h3>Description</h3>
-        <p>This project is an interactive web app that allows users to ... (brief description). It was built as part of [course name].</p>
+        <h2>Description</h2>
+        <p>This project is an interactive web app that allows users to perform tasks X, Y, and Z. Built as part of [Course Name].</p>
       </section>
 
       <section>
-        <h3>Skills learned</h3>
-        <ul>
-          <li>Responsive layout with CSS Grid and Flexbox</li>
-          <li>DOM manipulation with vanilla JavaScript</li>
-          <li>Improved accessibility: keyboard navigation, proper semantic structure</li>
+        <h2>Skills Learned</h2>
+        <ul class="skills">
+          <li>Responsive layout with Flexbox and Grid</li>
+          <li>Vanilla JavaScript DOM manipulation</li>
+          <li>Accessibility improvements (ARIA, semantic HTML)</li>
         </ul>
       </section>
 
       <section>
-        <h3>Links</h3>
-        <p><a href="https://github.com/YOURUSERNAME/project-alpha" target="_blank" rel="noopener">Source code on GitHub</a></p>
+        <h2>Links</h2>
+        <p><a href="https://github.com/YOURUSERNAME/project-alpha" target="_blank" rel="noopener">View Source on GitHub</a></p>
       </section>
     </article>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p><a href="index.html">Back to resume</a></p>
-    </div>
+  <footer>
+    <p><a href="index.html">← Back to Resume</a></p>
   </footer>
 </body>
 </html>
