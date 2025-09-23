@@ -2,7 +2,7 @@
    VARIABLES
 ======================= */
 :root {
-  --accent: #6c63ff; /* soft pastel purple */
+  --accent: #C6C4FF; /* soft pastel purple */
   --text: #333;       /* dark gray for readability */
   --muted: #666;
   --radius: 12px;
@@ -24,9 +24,9 @@ body {
   color: var(--text);
   line-height: 1.6;
   min-height: 100vh;
-  background: linear-gradient(270deg, #ffd1dc, #c3f0ca, #ffe7a1, #a3d2f2); /* soft pastel gradient */
+  background: linear-gradient(270deg, #FFE8EF, #E3FFE7, #FFECC2, #CFEBFF); /* soft pastel gradient */
   background-size: 800% 800%;
-  animation: gradientMove 40s ease infinite; /* slow for subtle effect */
+  animation: gradientMove 20s ease infinite; /* slow for subtle effect */
 }
 
 /* Gradient animation */
@@ -212,3 +212,4 @@ footer {
   }
   .hero-photo { margin-bottom: 1rem; }
 }
+
