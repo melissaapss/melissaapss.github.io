@@ -5,6 +5,90 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Full Name — Resume</title>
   <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <img src="images/profile.jpg" alt="Portrait of Full Name" class="hero-photo">
+      <div class="hero-text">
+        <h1>Hi, I'm <span class="accent">Full Name</span></h1>
+        <p class="subtitle">Aspiring Web Developer • Lifelong Learner</p>
+        <p class="contact">
+          <a href="mailto:youremail@example.com">youremail@example.com</a> ·
+          <a href="https://linkedin.com/in/your-linkedin" target="_blank">LinkedIn</a>
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <nav class="main-nav">
+    <a href="index.html" aria-current="page">Resume</a>
+    <a href="project-alpha.html">Project Alpha</a>
+    <a href="project-beta.html">Project Beta</a>
+  </nav>
+
+  <main class="container">
+    <section>
+      <h2>Objective</h2>
+      <p>Seeking an entry-level developer role where I can apply my skills in creating responsive, accessible, and engaging web experiences.</p>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <p><strong>University Name</strong> — B.S. Computer Science, May 2025</p>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="project-cards">
+        <a href="project-alpha.html" class="card">
+          <img src="images/project-alpha.jpg" alt="Preview of Project Alpha">
+          <h3>Project Alpha</h3>
+          <p>Interactive web app with modern design</p>
+        </a>
+        <a href="project-beta.html" class="card">
+          <img src="images/project-beta.jpg" alt="Preview of Project Beta">
+          <h3>Project Beta</h3>
+          <p>Data visualization with JavaScript</p>
+        </a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li>HTML5</li>
+        <li>CSS3 (Flexbox, Grid)</li>
+        <li>JavaScript</li>
+        <li>Accessibility</li>
+        <li>Git & GitHub</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Awards</h2>
+      <ul>
+        <li>Dean’s List, Fall 2023</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="yr"></span> Full Name • <a href="https://github.com/YOURUSERNAME">GitHub</a></p>
+  </footer>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Full Name — Resume</title>
+  <link rel="stylesheet" href="styles.css" />
   <meta name="description" content="Resume of Full Name - professional objective, education, projects, skills." />
 </head>
 <body>
@@ -105,4 +189,5 @@
   </script>
 </body>
 </html>
+
 
