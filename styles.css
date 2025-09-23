@@ -2,8 +2,8 @@
    VARIABLES
 ======================= */
 :root {
-  --accent: #0077ff;
-  --text: #222;
+  --accent: #6c63ff; /* soft pastel purple */
+  --text: #333;       /* dark gray for readability */
   --muted: #666;
   --radius: 12px;
   --shadow: 0 4px 12px rgba(0,0,0,0.08);
@@ -24,9 +24,9 @@ body {
   color: var(--text);
   line-height: 1.6;
   min-height: 100vh;
-  background: linear-gradient(270deg, #A3CEF1, #F9E79F, #F5B7B1, #B8E986); /* pastel gradient */
+  background: linear-gradient(270deg, #ffd1dc, #c3f0ca, #ffe7a1, #a3d2f2); /* soft pastel gradient */
   background-size: 800% 800%;
-  animation: gradientMove 30s ease infinite; /* slower for subtle effect */
+  animation: gradientMove 40s ease infinite; /* slow for subtle effect */
 }
 
 /* Gradient animation */
@@ -43,7 +43,7 @@ a {
   transition: color var(--transition-speed);
 }
 a:hover, a:focus {
-  color: #0056cc;
+  color: #5046b1; /* slightly darker pastel for hover */
   outline: none;
 }
 a:focus-visible {
@@ -67,8 +67,8 @@ h3 { font-size: 1.2rem; margin-bottom: 0.25rem; }
 .container {
   max-width: 1000px;
   margin: 2rem auto;
-  padding: 0 1rem;
-  background: rgba(255,255,255,0.85); /* semi-transparent for readability */
+  padding: 1.5rem;
+  background: rgba(255,255,255,0.9); /* slightly more opaque for readability */
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
@@ -81,7 +81,7 @@ h3 { font-size: 1.2rem; margin-bottom: 0.25rem; }
   align-items: center;
   gap: 2rem;
   padding: 2rem 1rem;
-  background: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.9);
   border-radius: var(--radius);
   margin: 2rem auto;
   max-width: 900px;
@@ -115,7 +115,7 @@ h3 { font-size: 1.2rem; margin-bottom: 0.25rem; }
   justify-content: center;
   gap: 2rem;
   padding: 1rem;
-  background: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.9);
   border-radius: var(--radius);
   margin: 1rem auto;
   max-width: 600px;
@@ -130,7 +130,7 @@ h3 { font-size: 1.2rem; margin-bottom: 0.25rem; }
 ======================= */
 section {
   margin-bottom: 2rem;
-  background: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.9);
   padding: 1rem;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -148,7 +148,7 @@ section p, section ul {
   gap: 1.5rem;
 }
 .card {
-  background: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.9);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   overflow: hidden;
@@ -181,8 +181,8 @@ section p, section ul {
   list-style: none;
 }
 .skills li {
-  background: #eef5ff;
-  color: #004080;
+  background: #f0f4ff; /* soft pastel blue */
+  color: #4b4b9d;      /* muted dark blue */
   padding: 0.35rem 0.75rem;
   border-radius: 999px;
   font-size: 0.9rem;
@@ -197,7 +197,7 @@ footer {
   font-size: 0.9rem;
   color: var(--muted);
   border-top: 1px solid #eee;
-  background: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.9);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
