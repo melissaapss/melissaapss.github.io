@@ -1,0 +1,143 @@
+/* Basic reset & variables */
+:root{
+  --max-width: 1000px;
+  --accent: #1167b1;
+  --bg: #ffffff;
+  --muted: #555;
+  --gap: 1rem;
+  --radius: 12px;
+  --container-padding: 1rem;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color-scheme: light;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;}
+body{
+  margin:0;
+  background:var(--bg);
+  color:#111;
+  line-height:1.45;
+  font-size:16px;
+}
+
+.container{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:var(--container-padding);
+}
+
+/* Skip link */
+.skip-link{
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+.skip-link:focus{
+  left:1rem;
+  top:1rem;
+  width:auto;
+  height:auto;
+  background:#fff;
+  border:2px solid var(--accent);
+  padding:0.5rem;
+  z-index:1000;
+}
+
+/* Header */
+.header-inner{
+  display:flex;
+  gap:var(--gap);
+  align-items:center;
+}
+.profile-photo{
+  border-radius:12px;
+  object-fit:cover;
+  width:160px;
+  height:160px;
+}
+
+/* Name & contact */
+.name{
+  margin:0 0 .25rem 0;
+  font-size:1.6rem;
+}
+.contact-line a{color:var(--accent); text-decoration:none;}
+.objective{margin-top:.5rem; color:var(--muted)}
+
+/* Nav */
+.main-nav{
+  background:#f7f9fb;
+  border-top:1px solid #e6eef8;
+  border-bottom:1px solid #e6eef8;
+}
+.nav-inner{
+  display:flex;
+  gap:1rem;
+  padding:.5rem 1rem;
+}
+.main-nav a{color:var(--accent); text-decoration:none}
+
+/* Main layout: two-column on wide screens */
+main.container{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:1.25rem;
+  padding-top:1.25rem;
+}
+
+/* Projects list */
+.projects-list{
+  list-style:none;
+  padding:0;
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:1rem;
+}
+.projects-list img{width:100%; height:180px; object-fit:cover; border-radius:8px}
+.projects-list figure{margin:0}
+
+/* Skills list */
+.skills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.5rem .75rem;
+  padding:0;
+  margin:0;
+  list-style:none;
+}
+.skills li{
+  background:#f0f6fb;
+  padding:.35rem .6rem;
+  border-radius:999px;
+  font-size:.95rem;
+  color:#0b3b5b;
+}
+
+/* Footer */
+.site-footer{border-top:1px solid #eee; padding:1rem 0; margin-top:2rem; color:var(--muted)}
+
+/* Focus styles for keyboard accessibility */
+a:focus, button:focus, input:focus {
+  outline:3px solid #ffd54d;
+  outline-offset:2px;
+}
+
+/* Responsive: two-column layout on larger viewports */
+@media (min-width: 800px){
+  main.container{
+    grid-template-columns: 2fr 1fr;
+  }
+  .projects-list{
+    grid-template-columns: 1fr 1fr;
+  }
+  .header-inner{align-items:flex-start}
+}
+
+/* Typography improvements for readability */
+h1,h2,h3{color:#0b2340; margin-top:0}
+h2{font-size:1.15rem; margin-bottom:.5rem}
+.job-meta{color:var(--muted); font-size:.95rem; margin-top:.25rem}
