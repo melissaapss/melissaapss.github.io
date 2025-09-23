@@ -1,110 +1,92 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Full Name — Resume</title>
-  <link rel="stylesheet" href="styles.css" />
-  <meta name="description" content="Resume of Full Name - professional objective, education, projects, skills." />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
-
-  <header class="site-header" role="banner">
-    <div class="container header-inner">
-      <div class="profile">
-        <img src="assets/images/profile.jpg" alt="Professional portrait of Full Name" class="profile-photo" width="160" height="160">
-      </div>
-      <div class="contact">
-        <h1 class="name">Full Name</h1>
-        <p class="contact-line">
-          <a href="mailto:youremail@example.com">youremail@example.com</a> •
-          <a href="https://www.linkedin.com/in/your-linkedin" target="_blank" rel="noopener">LinkedIn</a>
-        </p>
-        <p class="objective">Professional objective: Seeking an entry-level front-end web developer role where I can apply my HTML, CSS, and JavaScript skills to build accessible, responsive user experiences.</p>
-      </div>
+  <!-- Hero Section -->
+  <header class="hero">
+    <img src="images/profile.jpg" alt="Portrait of Full Name" class="hero-photo">
+    <div class="hero-text">
+      <h1>Hi, I'm <span class="accent">Full Name</span></h1>
+      <p class="subtitle">Aspiring Web Developer • Lifelong Learner</p>
+      <p class="contact">
+        <a href="mailto:youremail@example.com">youremail@example.com</a> ·
+        <a href="https://linkedin.com/in/your-linkedin" target="_blank" rel="noopener">LinkedIn</a>
+      </p>
     </div>
   </header>
 
-  <nav class="main-nav" role="navigation" aria-label="Main navigation">
-    <div class="container nav-inner">
-      <a href="index.html" aria-current="page">Resume</a>
-      <a href="project-alpha.html">Project Alpha</a>
-      <a href="project-beta.html">Project Beta</a>
-    </div>
+  <!-- Navigation -->
+  <nav class="main-nav">
+    <a href="index.html" aria-current="page">Resume</a>
+    <a href="project-alpha.html">Project Alpha</a>
+    <a href="project-beta.html">Project Beta</a>
   </nav>
 
-  <main id="main-content" class="container" role="main">
-    <section aria-labelledby="education">
-      <h2 id="education">Education</h2>
-      <p><strong>University Name</strong> — Bachelor of Science in Computer Science, May 2025</p>
-      <p>Relevant coursework: Web Development, Data Structures, UX Design</p>
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Objective -->
+    <section>
+      <h2>Objective</h2>
+      <p>Seeking an entry-level developer role where I can apply my skills in creating responsive, accessible, and engaging web experiences.</p>
     </section>
 
-    <section aria-labelledby="experience">
-      <h2 id="experience">Relevant Work Experience</h2>
-      <article class="job">
-        <h3>Web Development Intern — Company Name</h3>
-        <p class="job-meta">June 2024 – August 2024</p>
-        <p>Worked on front-end features: implemented responsive components and improved accessibility of the company portal. Technologies used: HTML, CSS, JavaScript.</p>
-      </article>
-      <!-- Omit this section if no work experience -->
+    <!-- Education -->
+    <section>
+      <h2>Education</h2>
+      <p><strong>University Name</strong> — B.S. Computer Science, May 2025</p>
+      <p>Relevant Coursework: Web Development, Data Structures, UX Design</p>
     </section>
 
-    <section aria-labelledby="projects">
-      <h2 id="projects">Selected Projects</h2>
-      <ul class="projects-list">
-        <li>
-          <a href="project-alpha.html">
-            <figure>
-              <img src="assets/images/project-alpha.jpg" alt="Screenshot of Project Alpha" />
-              <figcaption>Project Alpha — Interactive web app</figcaption>
-            </figure>
-          </a>
-        </li>
-        <li>
-          <a href="project-beta.html">
-            <figure>
-              <img src="assets/images/project-beta.jpg" alt="Screenshot of Project Beta" />
-              <figcaption>Project Beta — Data visualization</figcaption>
-            </figure>
-          </a>
-        </li>
-      </ul>
+    <!-- Projects -->
+    <section>
+      <h2>Projects</h2>
+      <div class="project-cards">
+        <a href="project-alpha.html" class="card">
+          <img src="images/project-alpha.jpg" alt="Preview of Project Alpha">
+          <h3>Project Alpha</h3>
+          <p>Interactive web app built with HTML, CSS, and JavaScript</p>
+        </a>
+        <a href="project-beta.html" class="card">
+          <img src="images/project-beta.jpg" alt="Preview of Project Beta">
+          <h3>Project Beta</h3>
+          <p>Data visualization project using JavaScript and Chart.js</p>
+        </a>
+      </div>
     </section>
 
-    <section aria-labelledby="skills">
-      <h2 id="skills">Skills</h2>
+    <!-- Skills -->
+    <section>
+      <h2>Skills</h2>
       <ul class="skills">
-        <li>HTML5 & semantic markup</li>
-        <li>CSS3 (Flexbox & Grid) & responsive design</li>
-        <li>JavaScript (ES6+)</li>
-        <li>Accessibility (WCAG basics, ARIA)</li>
+        <li>HTML5</li>
+        <li>CSS3 (Flexbox & Grid)</li>
+        <li>JavaScript</li>
+        <li>Accessibility</li>
         <li>Git & GitHub</li>
       </ul>
     </section>
 
-    <section aria-labelledby="awards">
-      <h2 id="awards">Awards & Honors</h2>
+    <!-- Awards -->
+    <section>
+      <h2>Awards</h2>
       <ul>
-        <li>Dean's List, Fall 2023</li>
-        <!-- remove or leave out if none -->
+        <li>Dean’s List, Fall 2023</li>
       </ul>
     </section>
   </main>
 
-  <footer class="site-footer" role="contentinfo">
-    <div class="container">
-      <p>© <span id="yr"></span> Full Name — <a href="https://github.com/YOURUSERNAME" target="_blank" rel="noopener">GitHub</a></p>
-    </div>
+  <!-- Footer -->
+  <footer>
+    <p>© <span id="yr"></span> Full Name • <a href="https://github.com/YOURUSERNAME">GitHub</a></p>
   </footer>
 
   <script>
-    // small script to insert current year
     document.getElementById('yr').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
-
-
