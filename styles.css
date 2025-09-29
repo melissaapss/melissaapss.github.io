@@ -136,8 +136,7 @@ section p, section ul {
   padding-bottom: 1rem;   
 }
 
-.card {
-   flex: 0 0 250px;        
+.card {     
   background: rgba(255,255,255,0.9);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
@@ -206,5 +205,6 @@ footer {
   }
   .info-photo { margin-bottom: 1rem; }
 }
+
 
 
