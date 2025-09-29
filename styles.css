@@ -74,10 +74,10 @@ h3 { font-size: 1.2rem; margin-bottom: 0.25rem; }
 }
 
 /* =======================
-   HERO SECTION
+   info SECTION
 ======================= */
-.hero {
-  display: flex;
+.info {
+ display: flex;
   align-items: center;
   gap: 2rem;
   padding: 2rem 1rem;
@@ -87,14 +87,14 @@ h3 { font-size: 1.2rem; margin-bottom: 0.25rem; }
   max-width: 900px;
   box-shadow: var(--shadow);
 }
-.hero-photo {
-  width: 150px;
+.info-photo {
+   width: 150px;
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
   box-shadow: var(--shadow);
 }
-.hero-text h1 .accent {
+.info-text h1 .accent {
   color: var(--accent);
 }
 .subtitle {
@@ -206,10 +206,11 @@ footer {
    RESPONSIVE
 ======================= */
 @media (max-width: 800px) {
-  .hero {
+  .info {
     flex-direction: column;
     text-align: center;
   }
-  .hero-photo { margin-bottom: 1rem; }
+  .info-photo { margin-bottom: 1rem; }
 }
+
 
