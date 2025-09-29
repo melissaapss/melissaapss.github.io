@@ -165,7 +165,7 @@ section p, section ul {
   max-width: 100%;    /* prevents it from overflowing */
   height: 160px;
   object-fit: contain; /* show entire image without cropping */
-  margin-bottom: 1rem; /* space between image and text */
+  margin: 0.5rem 0 1rem; /* space between image and text */
 }
 
 .card:hover {
@@ -222,6 +222,7 @@ footer {
   }
   .info-photo { margin-bottom: 1rem; }
 }
+
 
 
 
