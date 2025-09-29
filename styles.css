@@ -153,16 +153,26 @@ section p, section ul {
   box-shadow: var(--shadow);
   overflow: hidden;
   transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers content horizontally */
+  text-align: center;  /* centers text under the image */
+  padding: 1rem;
 }
+
+.card img {
+  width: auto;        /* keeps the aspect ratio */
+  max-width: 100%;    /* prevents it from overflowing */
+  height: 160px;
+  object-fit: contain; /* show entire image without cropping */
+  margin-bottom: 1rem; /* space between image and text */
+}
+
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
-.card img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-}
+
 .card h3 {
   margin: 0.75rem 1rem 0.25rem;
 }
@@ -212,5 +222,6 @@ footer {
   }
   .info-photo { margin-bottom: 1rem; }
 }
+
 
 
