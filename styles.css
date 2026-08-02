@@ -206,7 +206,230 @@ footer {
   .info-photo { margin-bottom: 1rem; }
 }
 
+/* ==================================================
+   MERN STACK / ARTIST SHOWCASE PAGE ONLY
+   This does not change images on the main resume page.
+================================================== */
 
+/* Page header */
+
+.mern-project-page .inf {
+  max-width: 1000px;
+  margin: 2rem auto 1.5rem;
+  padding: 0 1rem;
+}
+
+.mern-project-page .inf h1 {
+  margin-bottom: 1rem;
+  font-size: clamp(2.3rem, 6vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.mern-project-page .inf a {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 0.5rem 0.9rem;
+
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+
+  font-weight: 600;
+}
+
+/* Project-page container only */
+
+.mern-project-page .container {
+  max-width: 1000px;
+  margin: 1.5rem auto 3rem;
+  padding: 2rem;
+
+  background: rgba(255, 255, 255, 0.82);
+  border-radius: 22px;
+}
+
+/* Artist Showcase figure only */
+
+.mern-project-page figure.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+
+  width: 100%;
+  margin: 0 0 2rem;
+  padding: 1.5rem;
+
+  background: linear-gradient(
+    135deg,
+    rgba(247, 243, 255, 0.96),
+    rgba(255, 247, 251, 0.96)
+  );
+
+  border: 1px solid rgba(128, 123, 227, 0.15);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+
+  text-align: left;
+}
+
+/*
+Moves the Artist Showcase title above both screenshots
+without requiring you to move it in the HTML.
+*/
+
+.mern-project-page figure.card figcaption {
+  order: -1;
+  width: 100%;
+
+  margin: 0;
+  padding: 1rem 1.25rem;
+
+  background: rgba(255, 255, 255, 0.92);
+  border-left: 4px solid var(--accent);
+  border-radius: 10px;
+
+  color: var(--text);
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+/*
+Only the two images inside the MERN project figure
+are changed. Main-page images keep their existing 160px size.
+*/
+
+.mern-project-page figure.card > img {
+  display: block;
+
+  width: auto;
+  max-width: 100%;
+
+  height: auto;
+  max-height: 440px;
+
+  margin: 0 auto;
+
+  object-fit: contain;
+  object-position: center;
+
+  background: #ffffff;
+  border: 1px solid rgba(128, 123, 227, 0.15);
+  border-radius: 12px;
+
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+}
+
+/* Remove the general card movement on this project figure */
+
+.mern-project-page figure.card:hover {
+  transform: none;
+  box-shadow: var(--shadow);
+}
+
+/* Project-page sections only */
+
+.mern-project-page section {
+  margin-bottom: 1.5rem;
+  padding: 1.75rem;
+
+  border: 1px solid rgba(128, 123, 227, 0.12);
+  border-radius: 16px;
+
+  background: rgba(255, 255, 255, 0.94);
+}
+
+.mern-project-page section h2 {
+  position: relative;
+
+  border-bottom: none;
+  padding-bottom: 0.6rem;
+}
+
+.mern-project-page section h2::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 65%;
+  height: 3px;
+
+  background: linear-gradient(
+    90deg,
+    var(--accent),
+    #aaa6ff
+  );
+
+  border-radius: 999px;
+  content: "";
+}
+
+.mern-project-page section p {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+/* Skills on the MERN project page only */
+
+.mern-project-page .skills {
+  gap: 0.7rem;
+  padding: 0;
+}
+
+.mern-project-page .skills li {
+  padding: 0.5rem 0.9rem;
+
+  background: #f0efff;
+  border: 1px solid rgba(128, 123, 227, 0.15);
+
+  color: #5046b1;
+  font-weight: 600;
+}
+
+/* Tablet and mobile */
+
+@media (max-width: 800px) {
+  .mern-project-page .inf,
+  .mern-project-page .container {
+    width: calc(100% - 24px);
+  }
+
+  .mern-project-page .container {
+    padding: 1rem;
+  }
+
+  .mern-project-page figure.card {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .mern-project-page figure.card > img {
+    max-height: 360px;
+  }
+}
+
+@media (max-width: 500px) {
+  .mern-project-page .inf h1 {
+    font-size: 2.35rem;
+  }
+
+  .mern-project-page figure.card > img {
+    max-width: 100%;
+    max-height: 280px;
+  }
+
+  .mern-project-page figure.card figcaption {
+    padding: 0.85rem 1rem;
+    font-size: 1.05rem;
+  }
+
+  .mern-project-page section {
+    padding: 1.15rem;
+  }
+}
 
 
 
