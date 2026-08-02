@@ -1,7 +1,6 @@
-
 :root {
-  --accent: #807BE3; 
-  --text: #333;       
+  --accent: #807BE3;
+  --text: #333;
   --muted: #666;
   --radius: 12px;
   --shadow: 0 4px 12px rgba(0,0,0,0.08);
@@ -9,27 +8,48 @@
 }
 
 
- {
+/* General reset */
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 
 body {
   font-family: "Segoe UI", Roboto, sans-serif;
   color: var(--text);
   line-height: 1.6;
   min-height: 100vh;
-  background: linear-gradient(270deg, #FFE8EF, #E3FFE7, #FFECC2, #CFEBFF); 
+
+  background: linear-gradient(
+    270deg,
+    #FFE8EF,
+    #E3FFE7,
+    #FFECC2,
+    #CFEBFF
+  );
+
   background-size: 800% 800%;
-  animation: gradientMove 20s ease infinite; 
+  animation: gradientMove 20s ease infinite;
 }
 
 
 @keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 
@@ -38,62 +58,104 @@ a {
   text-decoration: none;
   transition: color var(--transition-speed);
 }
-a:hover, a:focus {
-  color: #5046b1; 
+
+
+a:hover,
+a:focus {
+  color: #5046b1;
   outline: none;
 }
+
+
 a:focus-visible {
   outline: 3px solid #ffd54d;
   outline-offset: 2px;
 }
 
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-weight: 700;
   color: var(--text);
   margin-bottom: 0.5rem;
 }
-h1 { font-size: 2rem; }
-h2 { font-size: 1.5rem; border-bottom: 2px solid var(--accent); display: inline-block; padding-bottom: 0.25rem; margin-bottom: 1rem; }
-h3 { font-size: 1.2rem; margin-bottom: 0.25rem; }
+
+
+h1 {
+  font-size: 2rem;
+}
+
+
+h2 {
+  display: inline-block;
+
+  margin-bottom: 1rem;
+  padding-bottom: 0.25rem;
+
+  border-bottom: 2px solid var(--accent);
+
+  font-size: 1.5rem;
+}
+
+
+h3 {
+  margin-bottom: 0.25rem;
+  font-size: 1.2rem;
+}
 
 
 .container {
   max-width: 1000px;
   margin: 2rem auto;
   padding: 1.5rem;
-  background: rgba(255,255,255,0.9); /* slightly more opaque for readability */
+
+  background: rgba(255,255,255,0.9);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
 
 
 .info {
- display: flex;
+  display: flex;
   align-items: center;
   gap: 2rem;
+
+  max-width: 900px;
+  margin: 2rem auto;
   padding: 2rem 1rem;
+
   background: rgba(255,255,255,0.9);
   border-radius: var(--radius);
-  margin: 2rem auto;
-  max-width: 900px;
   box-shadow: var(--shadow);
 }
+
+
 .info-photo {
-   width: 150px;
+  width: 150px;
   height: 150px;
+
   border-radius: 50%;
+
   object-fit: cover;
+
   box-shadow: var(--shadow);
 }
+
+
 .info-text h1 .accent {
   color: var(--accent);
 }
+
+
 .subtitle {
-  font-size: 1.1rem;
-  color: var(--muted);
   margin-bottom: 0.75rem;
+
+  color: var(--muted);
+  font-size: 1.1rem;
 }
+
+
 .contact a {
   margin-right: 0.5rem;
   color: var(--text);
@@ -104,13 +166,17 @@ h3 { font-size: 1.2rem; margin-bottom: 0.25rem; }
   display: flex;
   justify-content: center;
   gap: 2rem;
+
+  max-width: 600px;
+  margin: 1rem auto;
   padding: 1rem;
+
   background: rgba(255,255,255,0.9);
   border-radius: var(--radius);
-  margin: 1rem auto;
-  max-width: 600px;
   box-shadow: var(--shadow);
 }
+
+
 .main-nav a {
   font-weight: 600;
 }
@@ -118,83 +184,112 @@ h3 { font-size: 1.2rem; margin-bottom: 0.25rem; }
 
 section {
   margin-bottom: 2rem;
-  background: rgba(255,255,255,0.9);
   padding: 1rem;
+
+  background: rgba(255,255,255,0.9);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
-section p, section ul {
+
+
+section p,
+section ul {
   margin-bottom: 1rem;
 }
 
 
 .project-cards {
   display: flex;
-  flex-wrap: nowrap;      
-  gap: 1.5rem;            
-  overflow-x: auto;     
-  padding-bottom: 1rem;   
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+
+  overflow-x: auto;
+
+  padding-bottom: 1rem;
 }
 
-.card {     
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding: 1rem;
+  overflow: hidden;
+
   background: rgba(255,255,255,0.9);
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  overflow: hidden;
-  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
-  display: flex;
-  flex-direction: row;
-  align-items: center; 
-  text-align: center;  
-  padding: 1rem;
+
+  text-align: center;
+
+  transition:
+    transform var(--transition-speed),
+    box-shadow var(--transition-speed);
 }
 
+
 .card img {
-  width: auto;        
-  max-width: 100%;    
+  width: auto;
+  max-width: 100%;
   height: 160px;
-  object-fit: contain; 
-  margin: 0.5rem 0 1rem; 
+
+  margin: 0.5rem 0 1rem;
+
+  object-fit: contain;
 }
+
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+
+  box-shadow:
+    0 6px 16px rgba(0,0,0,0.12);
 }
+
 
 .card h3 {
   margin: 0.75rem 1rem 0.25rem;
 }
+
+
 .card p {
   margin: 0 1rem 1rem;
   color: var(--muted);
 }
 
+
 .skills {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
+
   list-style: none;
 }
 
+
 .skills li {
-  background: #f0f4ff; 
-  color: #4b4b9d;      
   padding: 0.35rem 0.75rem;
+
+  background: #f0f4ff;
   border-radius: 999px;
+
+  color: #4b4b9d;
   font-size: 0.9rem;
 }
 
 
 footer {
-  text-align: center;
   padding: 2rem 1rem;
-  font-size: 0.9rem;
-  color: var(--muted);
-  border-top: 1px solid #eee;
+
   background: rgba(255,255,255,0.9);
+  border-top: 1px solid #eee;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align: center;
 }
 
 
@@ -203,177 +298,824 @@ footer {
     flex-direction: column;
     text-align: center;
   }
-  .info-photo { margin-bottom: 1rem; }
+
+  .info-photo {
+    margin-bottom: 1rem;
+  }
 }
+
 
 /* ==================================================
-   DESSERT.HTML — ARTIST SHOWCASE LAYOUT
-   Only affects the MERN project page
+   DESSERT.HTML / MERN PROJECT PAGE ONLY
 ================================================== */
 
-.mern-project-page *,
-.mern-project-page *::before,
-.mern-project-page *::after {
-  box-sizing: border-box;
+
+.mern-project-page {
+  background:
+    radial-gradient(
+      circle at 8% 8%,
+      rgba(222, 255, 233, 0.9),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 92% 5%,
+      rgba(255, 242, 202, 0.9),
+      transparent 31%
+    ),
+    linear-gradient(
+      135deg,
+      #f7fff9,
+      #fffcec,
+      #fff7fa
+    );
+
+  background-attachment: fixed;
 }
 
-/* Keep the entire showcase inside the main container */
 
-.mern-project-page .mern-showcase {
-  display: grid !important;
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  align-items: stretch;
-  gap: 1.25rem !important;
+/* Hero */
 
-  width: 100% !important;
-  max-width: 100% !important;
+.mern-project-page .mern-hero {
+  position: relative;
 
-  margin: 0 0 2rem !important;
-  padding: 1.25rem !important;
+  width: min(1000px, calc(100% - 32px));
+  margin: 2rem auto 1.5rem;
+  padding: clamp(2rem, 5vw, 4rem);
 
   overflow: hidden;
 
-  background: linear-gradient(
-    135deg,
-    #f8f6ff,
-    #fff8fb
-  );
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.98),
+      rgba(245,243,255,0.97)
+    );
 
-  border: 1px solid rgba(128, 123, 227, 0.16);
-  border-radius: 18px;
+  border: 1px solid rgba(128,123,227,0.16);
+  border-radius: 28px;
 
-  box-shadow: 0 8px 24px rgba(50, 45, 90, 0.09);
+  box-shadow:
+    0 20px 50px rgba(62,55,115,0.13);
+}
+
+
+.mern-project-page .mern-hero::before {
+  position: absolute;
+  top: -130px;
+  right: -100px;
+
+  width: 340px;
+  height: 340px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(128,123,227,0.22),
+      transparent 68%
+    );
+
+  border-radius: 50%;
+
+  content: "";
+  pointer-events: none;
+}
+
+
+.mern-project-page .mern-hero::after {
+  position: absolute;
+  bottom: -150px;
+  left: -100px;
+
+  width: 320px;
+  height: 320px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,118,187,0.13),
+      transparent 68%
+    );
+
+  border-radius: 50%;
+
+  content: "";
+  pointer-events: none;
+}
+
+
+.mern-project-page .mern-back-link {
+  position: relative;
+  z-index: 1;
+
+  display: inline-flex;
+  align-items: center;
+
+  margin-bottom: 2.5rem;
+  padding: 0.55rem 0.95rem;
+
+  background: rgba(255,255,255,0.88);
+  border: 1px solid rgba(128,123,227,0.18);
+  border-radius: 999px;
+
+  box-shadow:
+    0 5px 15px rgba(62,55,115,0.07);
+
+  color: #5b53be;
+  font-size: 0.94rem;
+  font-weight: 650;
+
+  transition:
+    transform var(--transition-speed),
+    background-color var(--transition-speed),
+    box-shadow var(--transition-speed);
+}
+
+
+.mern-project-page .mern-back-link:hover {
+  background: #eeecff;
+
+  box-shadow:
+    0 8px 20px rgba(62,55,115,0.12);
+
+  transform: translateX(-4px);
+}
+
+
+.mern-project-page .mern-hero-content {
+  position: relative;
+  z-index: 1;
+
+  max-width: 760px;
+}
+
+
+.mern-project-page .mern-project-label {
+  margin-bottom: 0.75rem;
+
+  color: #6259c8;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+
+.mern-project-page .mern-hero h1 {
+  margin-bottom: 1.25rem;
+
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 800;
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+}
+
+
+.mern-project-page .mern-hero-subtitle {
+  max-width: 690px;
+  margin-bottom: 1.5rem;
+
+  color: #626170;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  line-height: 1.7;
+}
+
+
+.mern-project-page .tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+
+.mern-project-page .tech-stack span {
+  padding: 0.5rem 0.9rem;
+
+  background:
+    linear-gradient(
+      135deg,
+      #efedff,
+      #f8f6ff
+    );
+
+  border: 1px solid rgba(128,123,227,0.16);
+  border-radius: 999px;
+
+  box-shadow:
+    0 5px 14px rgba(75,67,140,0.06);
+
+  color: #574fb8;
+  font-size: 0.87rem;
+  font-weight: 650;
+}
+
+
+/* Main project container */
+
+.mern-project-page .mern-container {
+  width: min(1000px, calc(100% - 32px));
+  max-width: none;
+
+  margin: 0 auto 4rem;
+  padding: clamp(1rem, 3vw, 2rem);
+
+  overflow: hidden;
+
+  background: rgba(255,255,255,0.78);
+  border: 1px solid rgba(255,255,255,0.92);
+  border-radius: 26px;
+
+  box-shadow:
+    0 18px 48px rgba(58,52,105,0.12);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+
+/* Project preview */
+
+.mern-project-page .mern-showcase {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  align-items: stretch;
+  gap: 1.25rem;
+
+  width: 100%;
+  margin: 0 0 2rem;
+  padding: 1.25rem;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f7f5ff,
+      #fff8fb
+    );
+
+  border: 1px solid rgba(128,123,227,0.16);
+  border-radius: 20px;
+
+  box-shadow:
+    0 10px 28px rgba(55,49,105,0.09);
 
   text-align: left;
 }
 
-/* Keep the title across the top of both images */
+
+.mern-project-page .mern-showcase:hover {
+  transform: none;
+
+  box-shadow:
+    0 10px 28px rgba(55,49,105,0.09);
+}
+
 
 .mern-project-page .mern-showcase figcaption {
-  grid-column: 1 / -1 !important;
+  grid-column: 1 / -1;
 
-  display: flex;
-  flex-direction: column;
-  gap: 0.2rem;
+  width: 100%;
+  margin: 0;
+  padding: 1.35rem 1.5rem;
 
-  width: 100% !important;
-  margin: 0 !important;
-  padding: 1.15rem 1.3rem !important;
+  background:
+    linear-gradient(
+      110deg,
+      #ffffff,
+      #f8f7ff
+    );
 
-  background: #ffffff;
-
-  border: 1px solid rgba(128, 123, 227, 0.13);
+  border: 1px solid rgba(128,123,227,0.13);
   border-left: 5px solid var(--accent);
-  border-radius: 12px;
-
-  box-shadow: 0 5px 16px rgba(50, 45, 90, 0.07);
-}
-
-.mern-project-page .mern-showcase figcaption strong {
-  color: var(--text);
-  font-size: 1.35rem;
-  line-height: 1.25;
-}
-
-.mern-project-page .mern-showcase figcaption span {
-  color: var(--muted);
-  font-size: 0.95rem;
-  font-weight: 400;
-}
-
-/* Put the two screenshots beside each other */
-
-.mern-project-page .mern-screenshot {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: flex-start !important;
-  gap: 1rem !important;
-
-  width: 100% !important;
-  min-width: 0 !important;
-  min-height: 0 !important;
-
-  margin: 0 !important;
-  padding: 1.25rem !important;
-
-  background: rgba(255, 255, 255, 0.94);
-
-  border: 1px solid rgba(128, 123, 227, 0.14);
   border-radius: 14px;
 
-  box-shadow: 0 6px 18px rgba(50, 45, 90, 0.07);
+  box-shadow:
+    0 7px 20px rgba(61,55,110,0.08);
 }
 
-/* Screenshot heading */
 
-.mern-project-page .screenshot-label {
-  align-self: flex-start !important;
+.mern-project-page .showcase-label {
+  margin: 0 0 0.3rem;
 
-  margin: 0 !important;
-  padding: 0.45rem 0.8rem !important;
-
-  background: #efedff !important;
-  border: 1px solid rgba(128, 123, 227, 0.14);
-  border-radius: 999px;
-
-  color: #5046b1 !important;
-  font-size: 0.8rem;
-  font-weight: 700;
-  line-height: 1.2;
+  color: #6259c8;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
 }
 
-/* Keep the original normal image size */
+
+.mern-project-page .mern-showcase figcaption h2 {
+  margin-bottom: 0.35rem;
+  padding: 0;
+
+  border: none;
+
+  font-size: 1.55rem;
+}
+
+
+.mern-project-page .mern-showcase figcaption p:last-child {
+  max-width: 720px;
+  margin: 0;
+
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+
+/* Individual screenshot cards */
+
+.mern-project-page .mern-screenshot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  min-width: 0;
+  padding: 1.25rem;
+
+  background: rgba(255,255,255,0.94);
+
+  border: 1px solid rgba(128,123,227,0.14);
+  border-radius: 15px;
+
+  box-shadow:
+    0 7px 20px rgba(55,50,100,0.07);
+
+  transition:
+    transform var(--transition-speed),
+    box-shadow var(--transition-speed);
+}
+
+
+.mern-project-page .mern-screenshot:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 13px 28px rgba(55,50,100,0.12);
+}
+
+
+.mern-project-page .screenshot-heading {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+
+  align-self: stretch;
+}
+
+
+.mern-project-page .screenshot-number {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+
+  width: 2.25rem;
+  height: 2.25rem;
+
+  background:
+    linear-gradient(
+      135deg,
+      #807BE3,
+      #a49ef6
+    );
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 6px 14px rgba(128,123,227,0.22);
+
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+
+.mern-project-page .screenshot-heading h3 {
+  margin: 0 0 0.15rem;
+
+  color: #343241;
+  font-size: 1rem;
+}
+
+
+.mern-project-page .screenshot-heading p {
+  margin: 0;
+
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+
+/*
+The images keep the same 160px height used on your main page.
+Only these project-page images are targeted here.
+*/
 
 .mern-project-page .mern-screenshot img {
-  display: block !important;
+  display: block;
 
-  width: auto !important;
-  max-width: 100% !important;
+  width: auto;
+  max-width: 100%;
+  height: 160px;
 
-  height: 160px !important;
-  max-height: 160px !important;
+  margin: 0 auto;
 
-  margin: 0 auto !important;
-
-  object-fit: contain !important;
+  object-fit: contain;
   object-position: center;
 
   background: #ffffff;
 
-  border: 1px solid rgba(128, 123, 227, 0.14);
+  border: 1px solid rgba(128,123,227,0.14);
+  border-radius: 11px;
+
+  box-shadow:
+    0 8px 20px rgba(39,35,72,0.13);
+}
+
+
+/* Content cards */
+
+.mern-project-page .mern-content-section {
+  position: relative;
+
+  width: 100%;
+  margin-bottom: 1.5rem;
+  padding: clamp(1.5rem, 4vw, 2.25rem);
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.99),
+      rgba(250,249,255,0.98)
+    );
+
+  border: 1px solid rgba(128,123,227,0.13);
+  border-radius: 20px;
+
+  box-shadow:
+    0 9px 25px rgba(55,50,100,0.08);
+}
+
+
+.mern-project-page .mern-content-section::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 4px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #807BE3,
+      #b49fff,
+      #ff9dca
+    );
+
+  content: "";
+}
+
+
+.mern-project-page .mern-content-section:last-child {
+  margin-bottom: 0;
+}
+
+
+.mern-project-page .section-heading {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  margin-bottom: 1.75rem;
+}
+
+
+.mern-project-page .section-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+
+  width: 3rem;
+  height: 3rem;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e8e5ff,
+      #f7efff
+    );
+
+  border: 1px solid rgba(128,123,227,0.14);
+  border-radius: 14px;
+
+  box-shadow:
+    0 7px 16px rgba(98,89,200,0.12);
+
+  color: #6259c8;
+  font-size: 1.15rem;
+}
+
+
+.mern-project-page .section-eyebrow {
+  margin: 0 0 0.1rem;
+
+  color: #6c64c8;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+
+.mern-project-page .section-heading h2 {
+  margin: 0;
+  padding: 0;
+
+  border: none;
+
+  font-size: clamp(1.55rem, 3vw, 1.9rem);
+}
+
+
+/* Description */
+
+.mern-project-page .description-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(240px, 0.85fr);
+  gap: 1.5rem;
+}
+
+
+.mern-project-page .description-copy {
+  padding-right: 0.5rem;
+}
+
+
+.mern-project-page .description-copy h3,
+.mern-project-page .project-highlights h3 {
+  margin-bottom: 0.8rem;
+
+  color: #373445;
+  font-size: 1.05rem;
+}
+
+
+.mern-project-page .description-copy p {
+  margin-bottom: 1rem;
+
+  color: #575664;
+  line-height: 1.8;
+}
+
+
+.mern-project-page .description-copy p:last-child {
+  margin-bottom: 0;
+}
+
+
+.mern-project-page .project-highlights {
+  padding: 1.25rem;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f5f3ff,
+      #ffffff
+    );
+
+  border: 1px solid rgba(128,123,227,0.14);
+  border-radius: 15px;
+}
+
+
+.mern-project-page .project-highlights ul {
+  display: grid;
+  gap: 0.7rem;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+
+.mern-project-page .project-highlights li {
+  position: relative;
+
+  padding-left: 1.65rem;
+
+  color: #55536c;
+  font-size: 0.9rem;
+}
+
+
+.mern-project-page .project-highlights li::before {
+  position: absolute;
+  top: 0.15rem;
+  left: 0;
+
+  display: grid;
+  place-items: center;
+
+  width: 1.1rem;
+  height: 1.1rem;
+
+  background: var(--accent);
+  border-radius: 50%;
+
+  color: #ffffff;
+  content: "✓";
+
+  font-size: 0.6rem;
+  font-weight: 800;
+}
+
+
+/* Skills */
+
+.mern-project-page .mern-skills {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 1rem;
+
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+
+.mern-project-page .mern-skills li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+
+  min-width: 0;
+  padding: 1.25rem;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f8f7ff,
+      #ffffff
+    );
+
+  border: 1px solid rgba(128,123,227,0.14);
+  border-radius: 15px;
+
+  color: inherit;
+
+  transition:
+    transform var(--transition-speed),
+    box-shadow var(--transition-speed),
+    background-color var(--transition-speed);
+}
+
+
+.mern-project-page .mern-skills li:hover {
+  background: #f3f1ff;
+
+  box-shadow:
+    0 10px 22px rgba(82,74,155,0.11);
+
+  transform: translateY(-3px);
+}
+
+
+.mern-project-page .skill-number {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+
+  width: 2.1rem;
+  height: 2.1rem;
+
+  background: #ece9ff;
   border-radius: 10px;
 
-  box-shadow: 0 7px 18px rgba(40, 35, 80, 0.12);
+  color: #5b53be;
+  font-size: 0.73rem;
+  font-weight: 800;
 }
 
-/* Remove card movement from the entire showcase */
 
-.mern-project-page .mern-showcase:hover {
-  transform: none !important;
-  box-shadow: 0 8px 24px rgba(50, 45, 90, 0.09) !important;
+.mern-project-page .mern-skills h3 {
+  margin-bottom: 0.35rem;
+
+  color: #383548;
+  font-size: 1rem;
 }
 
-/* Tablet and mobile: stack only on smaller screens */
 
-@media (max-width: 700px) {
+.mern-project-page .mern-skills p {
+  margin: 0;
+
+  color: #666473;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+
+/* Tablet */
+
+@media (max-width: 800px) {
+  .mern-project-page .mern-hero,
+  .mern-project-page .mern-container {
+    width: calc(100% - 24px);
+  }
+
   .mern-project-page .mern-showcase {
-    grid-template-columns: 1fr !important;
-    gap: 1rem !important;
-    padding: 1rem !important;
+    grid-template-columns: 1fr;
   }
 
   .mern-project-page .mern-showcase figcaption {
-    grid-column: 1 !important;
+    grid-column: 1;
+  }
+
+  .mern-project-page .description-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .mern-project-page .mern-skills {
+    grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 450px) {
+
+/* Mobile */
+
+@media (max-width: 500px) {
+  .mern-project-page .mern-hero,
+  .mern-project-page .mern-container {
+    width: calc(100% - 16px);
+  }
+
+  .mern-project-page .mern-hero {
+    padding: 1.5rem;
+    border-radius: 20px;
+  }
+
+  .mern-project-page .mern-back-link {
+    margin-bottom: 1.75rem;
+  }
+
+  .mern-project-page .mern-hero h1 {
+    font-size: 2.75rem;
+  }
+
+  .mern-project-page .mern-container {
+    padding: 0.7rem;
+    border-radius: 18px;
+  }
+
   .mern-project-page .mern-showcase {
-    padding: 0.7rem !important;
+    gap: 0.8rem;
+    padding: 0.75rem;
+    border-radius: 15px;
+  }
+
+  .mern-project-page .mern-showcase figcaption {
+    padding: 1rem;
   }
 
   .mern-project-page .mern-screenshot {
-    padding: 1rem !important;
+    padding: 1rem;
+  }
+
+  .mern-project-page .section-heading {
+    align-items: flex-start;
+  }
+
+  .mern-project-page .section-icon {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+
+  .mern-project-page .mern-content-section {
+    padding: 1.3rem;
+    border-radius: 16px;
+  }
+
+  .mern-project-page .mern-skills li {
+    padding: 1rem;
+  }
+}
+
+
+/* Reduced motion */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
