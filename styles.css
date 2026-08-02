@@ -207,55 +207,57 @@ footer {
 }
 
 /* ==================================================
-   MERN STACK / ARTIST SHOWCASE PAGE ONLY
-   This does not change images on the main resume page.
+   DESSERT.HTML — MERN SHOWCASE ONLY
 ================================================== */
-
-/* Page header */
 
 .mern-project-page .inf {
   max-width: 1000px;
-  margin: 2rem auto 1.5rem;
-  padding: 0 1rem;
+  margin: 2rem auto 1.25rem;
+  padding: 1.5rem 1.75rem;
+
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(128, 123, 227, 0.15);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
 }
 
 .mern-project-page .inf h1 {
-  margin-bottom: 1rem;
-  font-size: clamp(2.3rem, 6vw, 4rem);
+  margin-bottom: 0.75rem;
+  font-size: clamp(2rem, 5vw, 3.2rem);
   line-height: 1.1;
-  letter-spacing: -0.04em;
+}
+
+.mern-project-page .inf p {
+  margin: 0;
 }
 
 .mern-project-page .inf a {
-  display: inline-flex;
-  align-items: center;
+  display: inline-block;
+  padding: 0.45rem 0.85rem;
 
-  padding: 0.5rem 0.9rem;
-
-  background: rgba(255, 255, 255, 0.75);
+  background: #f0efff;
   border-radius: 999px;
-  box-shadow: var(--shadow);
 
+  color: #5046b1;
   font-weight: 600;
 }
 
-/* Project-page container only */
-
 .mern-project-page .container {
   max-width: 1000px;
-  margin: 1.5rem auto 3rem;
+  margin: 0 auto 3rem;
   padding: 2rem;
 
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.84);
   border-radius: 22px;
+  box-shadow: 0 12px 32px rgba(55, 50, 100, 0.12);
 }
 
-/* Artist Showcase figure only */
+/* Override the regular horizontal .card only here */
 
-.mern-project-page figure.card {
+.mern-project-page .mern-showcase {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   gap: 1.5rem;
 
   width: 100%;
@@ -264,186 +266,98 @@ footer {
 
   background: linear-gradient(
     135deg,
-    rgba(247, 243, 255, 0.96),
-    rgba(255, 247, 251, 0.96)
+    rgba(247, 244, 255, 0.98),
+    rgba(255, 247, 251, 0.98)
   );
-
-  border: 1px solid rgba(128, 123, 227, 0.15);
-  border-radius: 18px;
-  box-shadow: var(--shadow);
-
-  text-align: left;
-}
-
-/*
-Moves the Artist Showcase title above both screenshots
-without requiring you to move it in the HTML.
-*/
-
-.mern-project-page figure.card figcaption {
-  order: -1;
-  width: 100%;
-
-  margin: 0;
-  padding: 1rem 1.25rem;
-
-  background: rgba(255, 255, 255, 0.92);
-  border-left: 4px solid var(--accent);
-  border-radius: 10px;
-
-  color: var(--text);
-  font-size: 1.25rem;
-  font-weight: 700;
-  text-align: left;
-}
-
-/* ==================================================
-   DESSERT.HTML — MERN PROJECT PAGE ONLY
-   Does not change image width or height.
-================================================== */
-
-/* Page header */
-
-.mern-project-page .inf {
-  max-width: 1000px;
-  margin: 2rem auto 1.25rem;
-  padding: 1.75rem 2rem;
-
-  background: rgba(255, 255, 255, 0.88);
-  border: 1px solid rgba(128, 123, 227, 0.14);
-  border-radius: 18px;
-  box-shadow: var(--shadow);
-}
-
-.mern-project-page .inf h1 {
-  margin-bottom: 1rem;
-
-  font-size: clamp(2rem, 5vw, 3.25rem);
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-}
-
-.mern-project-page .inf p {
-  margin: 0;
-}
-
-.mern-project-page .inf a {
-  display: inline-flex;
-  align-items: center;
-
-  padding: 0.45rem 0.85rem;
-
-  background: #f0efff;
-  border: 1px solid rgba(128, 123, 227, 0.18);
-  border-radius: 999px;
-
-  color: #5046b1;
-  font-weight: 600;
-
-  transition:
-    background-color var(--transition-speed),
-    transform var(--transition-speed);
-}
-
-.mern-project-page .inf a:hover {
-  background: #e6e3ff;
-  transform: translateX(-3px);
-}
-
-/* Main project container */
-
-.mern-project-page .container {
-  max-width: 1000px;
-  margin: 0 auto 3rem;
-  padding: 2rem;
-
-  background: rgba(255, 255, 255, 0.82);
-  border: 1px solid rgba(255, 255, 255, 0.9);
-  border-radius: 22px;
-
-  box-shadow:
-    0 12px 35px rgba(62, 58, 110, 0.12);
-
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-}
-
-/* Artist Showcase card */
-
-.mern-project-page figure.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.25rem;
-
-  width: 100%;
-  margin: 0 0 2rem;
-  padding: 1.5rem;
-
-  background:
-    linear-gradient(
-      135deg,
-      rgba(245, 242, 255, 0.98),
-      rgba(255, 247, 251, 0.98)
-    );
 
   border: 1px solid rgba(128, 123, 227, 0.16);
   border-radius: 18px;
 
-  box-shadow:
-    0 8px 24px rgba(62, 58, 110, 0.1);
-
-  text-align: center;
-}
-
-/*
-Keeps your existing image dimensions.
-This rule only removes unwanted margin and stretching.
-*/
-
-.mern-project-page figure.card > img {
-  display: block;
-  flex: none;
-
-  margin: 0 auto;
-
-  border: 1px solid rgba(128, 123, 227, 0.14);
-  border-radius: 12px;
-
-  background: #ffffff;
-
-  box-shadow:
-    0 8px 20px rgba(40, 35, 85, 0.11);
-}
-
-/* Artist Showcase title at the top */
-
-.mern-project-page figure.card figcaption {
-  order: -1;
-
-  width: 100%;
-  padding: 1rem 1.25rem;
-
-  background: rgba(255, 255, 255, 0.95);
-  border-left: 4px solid var(--accent);
-  border-radius: 10px;
-
-  color: var(--text);
-  font-size: 1.15rem;
-  font-weight: 700;
   text-align: left;
 }
 
-/* Stop the whole figure from moving when hovered */
-
-.mern-project-page figure.card:hover {
+.mern-project-page .mern-showcase:hover {
   transform: none;
-
-  box-shadow:
-    0 8px 24px rgba(62, 58, 110, 0.1);
+  box-shadow: var(--shadow);
 }
 
-/* Description and skills sections */
+/* Artist Showcase heading at the top */
+
+.mern-project-page .mern-showcase figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+
+  width: 100%;
+  padding: 1rem 1.2rem;
+
+  background: #ffffff;
+  border-left: 4px solid var(--accent);
+  border-radius: 10px;
+}
+
+.mern-project-page .mern-showcase figcaption strong {
+  color: var(--text);
+  font-size: 1.35rem;
+}
+
+.mern-project-page .mern-showcase figcaption span {
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
+/* Each screenshot gets its own styled panel */
+
+.mern-project-page .mern-screenshot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  padding: 1.25rem;
+
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(128, 123, 227, 0.14);
+  border-radius: 14px;
+}
+
+.mern-project-page .screenshot-label {
+  align-self: flex-start;
+
+  margin: 0 0 0.9rem;
+  padding: 0.35rem 0.7rem;
+
+  background: #f0efff;
+  border-radius: 999px;
+
+  color: #5046b1;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+/*
+This keeps the same image height from your original CSS.
+It only centers the images inside the new panels.
+*/
+
+.mern-project-page .mern-screenshot img {
+  display: block;
+
+  width: auto;
+  max-width: 100%;
+  height: 160px;
+
+  margin: 0;
+
+  object-fit: contain;
+
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 7px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Project content sections */
 
 .mern-project-page section {
   margin-bottom: 1.5rem;
@@ -452,13 +366,6 @@ This rule only removes unwanted margin and stretching.
   background: rgba(255, 255, 255, 0.96);
   border: 1px solid rgba(128, 123, 227, 0.13);
   border-radius: 16px;
-
-  box-shadow:
-    0 6px 18px rgba(62, 58, 110, 0.08);
-}
-
-.mern-project-page section:last-child {
-  margin-bottom: 0;
 }
 
 .mern-project-page section h2 {
@@ -478,57 +385,54 @@ This rule only removes unwanted margin and stretching.
   width: 65%;
   height: 3px;
 
-  background:
-    linear-gradient(
-      90deg,
-      var(--accent),
-      #aaa6ff
-    );
+  background: linear-gradient(
+    90deg,
+    var(--accent),
+    #aaa6ff
+  );
 
   border-radius: 999px;
   content: "";
 }
 
 .mern-project-page section p {
-  margin-bottom: 0;
-
+  margin-bottom: 1rem;
   color: var(--muted);
-  line-height: 1.8;
+  line-height: 1.75;
 }
 
-/* Skills list */
+.mern-project-page section p:last-child {
+  margin-bottom: 0;
+}
+
+/* Skills become cleaner information cards */
 
 .mern-project-page .skills {
   display: grid;
-  grid-template-columns:
-    repeat(2, minmax(0, 1fr));
-
-  gap: 0.8rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
 
   margin: 0;
   padding: 0;
-
-  list-style: none;
 }
 
 .mern-project-page .skills li {
   position: relative;
 
-  padding: 0.85rem 1rem 0.85rem 2.25rem;
+  padding: 0.9rem 1rem 0.9rem 2.35rem;
 
   background: #f7f6ff;
   border: 1px solid rgba(128, 123, 227, 0.14);
   border-radius: 10px;
 
   color: #4b4b7e;
-  font-size: 0.92rem;
   line-height: 1.5;
 }
 
 .mern-project-page .skills li::before {
   position: absolute;
-  top: 0.78rem;
-  left: 0.85rem;
+  top: 0.85rem;
+  left: 0.9rem;
 
   color: var(--accent);
   content: "✓";
@@ -537,23 +441,17 @@ This rule only removes unwanted margin and stretching.
   font-weight: 800;
 }
 
-/* Tablet */
-
 @media (max-width: 800px) {
   .mern-project-page .inf,
   .mern-project-page .container {
     width: calc(100% - 24px);
   }
 
-  .mern-project-page .inf {
-    padding: 1.4rem;
-  }
-
   .mern-project-page .container {
     padding: 1.25rem;
   }
 
-  .mern-project-page figure.card {
+  .mern-project-page .mern-showcase {
     padding: 1rem;
   }
 
@@ -562,47 +460,34 @@ This rule only removes unwanted margin and stretching.
   }
 }
 
-/* Mobile */
-
 @media (max-width: 500px) {
-  .mern-project-page .inf h1 {
-    font-size: 2rem;
-  }
-
   .mern-project-page .inf,
   .mern-project-page .container {
     width: calc(100% - 16px);
   }
 
+  .mern-project-page .inf {
+    padding: 1.15rem;
+  }
+
   .mern-project-page .container {
     padding: 0.75rem;
   }
 
-  .mern-project-page figure.card {
-    gap: 1rem;
+  .mern-project-page .mern-showcase {
     padding: 0.75rem;
   }
 
-  .mern-project-page figure.card figcaption {
-    padding: 0.85rem 1rem;
-    font-size: 1rem;
+  .mern-project-page .mern-screenshot {
+    padding: 0.75rem;
+  }
+
+  .mern-project-page .mern-screenshot img {
+    max-width: 100%;
+    height: 160px;
   }
 
   .mern-project-page section {
     padding: 1.15rem;
   }
-
-  .mern-project-page .skills li {
-    padding:
-      0.75rem
-      0.8rem
-      0.75rem
-      2rem;
-  }
-
-  .mern-project-page .skills li::before {
-    left: 0.7rem;
-  }
 }
-
-
