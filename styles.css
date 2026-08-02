@@ -207,13 +207,9 @@ footer {
 }
 
 /* ==================================================
-   DESSERT.HTML — MERN PROJECT PAGE ONLY
+   DESSERT.HTML — ARTIST SHOWCASE LAYOUT
+   Only affects the MERN project page
 ================================================== */
-
-/*
-Fix box sizing only inside Dessert.html.
-This prevents padded elements from exceeding their container.
-*/
 
 .mern-project-page *,
 .mern-project-page *::before,
@@ -221,34 +217,19 @@ This prevents padded elements from exceeding their container.
   box-sizing: border-box;
 }
 
-/* Main project-page container */
-
-.mern-project-page .container {
-  width: calc(100% - 32px);
-  max-width: 1000px;
-
-  margin: 2rem auto 3rem;
-  padding: 1.5rem;
-
-  overflow: hidden;
-
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 20px;
-  box-shadow: var(--shadow);
-}
-
-/* Complete Artist Showcase block */
+/* Keep the entire showcase inside the main container */
 
 .mern-project-page .mern-showcase {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  align-items: stretch;
+  gap: 1.25rem !important;
 
-  width: 100%;
-  max-width: 100%;
+  width: 100% !important;
+  max-width: 100% !important;
 
-  margin: 0 0 2rem;
-  padding: 1rem;
+  margin: 0 0 2rem !important;
+  padding: 1.25rem !important;
 
   overflow: hidden;
 
@@ -261,42 +242,37 @@ This prevents padded elements from exceeding their container.
   border: 1px solid rgba(128, 123, 227, 0.16);
   border-radius: 18px;
 
-  box-shadow: 0 8px 22px rgba(50, 45, 90, 0.08);
+  box-shadow: 0 8px 24px rgba(50, 45, 90, 0.09);
 
   text-align: left;
 }
 
-/* Disable the original card hover movement */
-
-.mern-project-page .mern-showcase:hover {
-  transform: none;
-  box-shadow: 0 8px 22px rgba(50, 45, 90, 0.08);
-}
-
-/* Artist Showcase heading */
+/* Keep the title across the top of both images */
 
 .mern-project-page .mern-showcase figcaption {
+  grid-column: 1 / -1 !important;
+
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
 
-  width: 100%;
-  max-width: 100%;
-
-  margin: 0;
-  padding: 1rem 1.25rem;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 1.15rem 1.3rem !important;
 
   background: #ffffff;
 
   border: 1px solid rgba(128, 123, 227, 0.13);
-  border-left: 4px solid var(--accent);
+  border-left: 5px solid var(--accent);
   border-radius: 12px;
+
+  box-shadow: 0 5px 16px rgba(50, 45, 90, 0.07);
 }
 
 .mern-project-page .mern-showcase figcaption strong {
   color: var(--text);
-  font-size: 1.3rem;
-  line-height: 1.3;
+  font-size: 1.35rem;
+  line-height: 1.25;
 }
 
 .mern-project-page .mern-showcase figcaption span {
@@ -305,263 +281,99 @@ This prevents padded elements from exceeding their container.
   font-weight: 400;
 }
 
-/* Compact screenshot rows */
+/* Put the two screenshots beside each other */
 
 .mern-project-page .mern-screenshot {
-  display: grid;
-  grid-template-columns: minmax(180px, 260px) 1fr;
-  align-items: center;
-  gap: 1.5rem;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 1rem !important;
 
-  width: 100%;
-  max-width: 100%;
-  min-height: 0;
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
 
-  margin: 0;
-  padding: 1rem 1.25rem;
+  margin: 0 !important;
+  padding: 1.25rem !important;
 
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.94);
 
   border: 1px solid rgba(128, 123, 227, 0.14);
   border-radius: 14px;
 
-  box-shadow: 0 5px 16px rgba(50, 45, 90, 0.06);
+  box-shadow: 0 6px 18px rgba(50, 45, 90, 0.07);
 }
 
-/* Screenshot labels */
+/* Screenshot heading */
 
 .mern-project-page .screenshot-label {
-  margin: 0;
-  padding: 0;
+  align-self: flex-start !important;
 
-  background: transparent;
-  border: none;
+  margin: 0 !important;
+  padding: 0.45rem 0.8rem !important;
 
-  color: #3f3b69;
-  font-size: 1rem;
+  background: #efedff !important;
+  border: 1px solid rgba(128, 123, 227, 0.14);
+  border-radius: 999px;
+
+  color: #5046b1 !important;
+  font-size: 0.8rem;
   font-weight: 700;
-  line-height: 1.4;
+  line-height: 1.2;
 }
 
-.mern-project-page .screenshot-label::before {
-  display: block;
-
-  margin-bottom: 0.35rem;
-
-  color: var(--accent);
-  content: "PROJECT VIEW";
-
-  font-size: 0.68rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-}
-
-/*
-Keep the screenshots at the same normal size.
-No main-page images are affected.
-*/
+/* Keep the original normal image size */
 
 .mern-project-page .mern-screenshot img {
-  display: block;
-  justify-self: center;
+  display: block !important;
 
-  width: auto;
-  max-width: 100%;
+  width: auto !important;
+  max-width: 100% !important;
 
-  height: 160px;
-  max-height: 160px;
+  height: 160px !important;
+  max-height: 160px !important;
 
-  margin: 0;
+  margin: 0 auto !important;
 
-  object-fit: contain;
+  object-fit: contain !important;
   object-position: center;
 
   background: #ffffff;
+
   border: 1px solid rgba(128, 123, 227, 0.14);
   border-radius: 10px;
 
   box-shadow: 0 7px 18px rgba(40, 35, 80, 0.12);
 }
 
-/* Alternate the second screenshot row */
+/* Remove card movement from the entire showcase */
 
-.mern-project-page .mern-screenshot:nth-of-type(even) {
-  grid-template-columns: 1fr minmax(180px, 260px);
+.mern-project-page .mern-showcase:hover {
+  transform: none !important;
+  box-shadow: 0 8px 24px rgba(50, 45, 90, 0.09) !important;
 }
 
-.mern-project-page
-  .mern-screenshot:nth-of-type(even)
-  .screenshot-label {
-  grid-column: 2;
-  grid-row: 1;
-}
-
-.mern-project-page
-  .mern-screenshot:nth-of-type(even)
-  img {
-  grid-column: 1;
-  grid-row: 1;
-}
-
-/* Description and Skills sections */
-
-.mern-project-page section {
-  width: 100%;
-  max-width: 100%;
-
-  margin-bottom: 1.5rem;
-  padding: 1.75rem;
-
-  overflow: hidden;
-
-  background: rgba(255, 255, 255, 0.96);
-
-  border: 1px solid rgba(128, 123, 227, 0.12);
-  border-radius: 16px;
-
-  box-shadow: 0 6px 18px rgba(50, 45, 90, 0.07);
-}
-
-.mern-project-page section:last-child {
-  margin-bottom: 0;
-}
-
-.mern-project-page section h2 {
-  position: relative;
-
-  margin-bottom: 1.25rem;
-  padding-bottom: 0.55rem;
-
-  border-bottom: none;
-}
-
-.mern-project-page section h2::after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-
-  width: 55px;
-  height: 3px;
-
-  background: var(--accent);
-  border-radius: 999px;
-
-  content: "";
-}
-
-.mern-project-page section p {
-  margin-bottom: 1rem;
-
-  color: var(--muted);
-  line-height: 1.75;
-}
-
-.mern-project-page section p:last-child {
-  margin-bottom: 0;
-}
-
-/* Skills */
-
-.mern-project-page .skills {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.75rem;
-
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-}
-
-.mern-project-page .skills li {
-  position: relative;
-
-  padding: 0.85rem 1rem 0.85rem 2.65rem;
-
-  background: #f6f5ff;
-
-  border: 1px solid rgba(128, 123, 227, 0.14);
-  border-radius: 10px;
-
-  color: #4b4871;
-  line-height: 1.5;
-}
-
-.mern-project-page .skills li::before {
-  position: absolute;
-  top: 0.88rem;
-  left: 0.9rem;
-
-  display: grid;
-  place-items: center;
-
-  width: 1.25rem;
-  height: 1.25rem;
-
-  background: var(--accent);
-  border-radius: 50%;
-
-  color: #ffffff;
-  content: "✓";
-
-  font-size: 0.7rem;
-  font-weight: 800;
-}
-
-/* Tablet and mobile */
+/* Tablet and mobile: stack only on smaller screens */
 
 @media (max-width: 700px) {
-  .mern-project-page .container {
-    width: calc(100% - 20px);
-    padding: 1rem;
-  }
-
   .mern-project-page .mern-showcase {
-    padding: 0.75rem;
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+    padding: 1rem !important;
   }
 
-  .mern-project-page .mern-screenshot,
-  .mern-project-page .mern-screenshot:nth-of-type(even) {
-    grid-template-columns: 1fr;
-    gap: 0.85rem;
-
-    padding: 1rem;
-
-    text-align: center;
-  }
-
-  .mern-project-page .mern-screenshot .screenshot-label,
-  .mern-project-page
-    .mern-screenshot:nth-of-type(even)
-    .screenshot-label {
-    grid-column: 1;
-    grid-row: 1;
-  }
-
-  .mern-project-page .mern-screenshot img,
-  .mern-project-page
-    .mern-screenshot:nth-of-type(even)
-    img {
-    grid-column: 1;
-    grid-row: 2;
-  }
-
-  .mern-project-page .skills {
-    grid-template-columns: 1fr;
+  .mern-project-page .mern-showcase figcaption {
+    grid-column: 1 !important;
   }
 }
 
 @media (max-width: 450px) {
-  .mern-project-page .container {
-    width: calc(100% - 12px);
-    padding: 0.6rem;
+  .mern-project-page .mern-showcase {
+    padding: 0.7rem !important;
   }
 
-  .mern-project-page .mern-showcase figcaption {
-    padding: 0.9rem 1rem;
-  }
-
-  .mern-project-page section {
-    padding: 1.2rem;
+  .mern-project-page .mern-screenshot {
+    padding: 1rem !important;
   }
 }
