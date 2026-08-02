@@ -297,56 +297,177 @@ without requiring you to move it in the HTML.
   text-align: left;
 }
 
+/* ==================================================
+   DESSERT.HTML — MERN PROJECT PAGE ONLY
+   Does not change image width or height.
+================================================== */
+
+/* Page header */
+
+.mern-project-page .inf {
+  max-width: 1000px;
+  margin: 2rem auto 1.25rem;
+  padding: 1.75rem 2rem;
+
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(128, 123, 227, 0.14);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.mern-project-page .inf h1 {
+  margin-bottom: 1rem;
+
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.mern-project-page .inf p {
+  margin: 0;
+}
+
+.mern-project-page .inf a {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 0.45rem 0.85rem;
+
+  background: #f0efff;
+  border: 1px solid rgba(128, 123, 227, 0.18);
+  border-radius: 999px;
+
+  color: #5046b1;
+  font-weight: 600;
+
+  transition:
+    background-color var(--transition-speed),
+    transform var(--transition-speed);
+}
+
+.mern-project-page .inf a:hover {
+  background: #e6e3ff;
+  transform: translateX(-3px);
+}
+
+/* Main project container */
+
+.mern-project-page .container {
+  max-width: 1000px;
+  margin: 0 auto 3rem;
+  padding: 2rem;
+
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 22px;
+
+  box-shadow:
+    0 12px 35px rgba(62, 58, 110, 0.12);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Artist Showcase card */
+
+.mern-project-page figure.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+
+  width: 100%;
+  margin: 0 0 2rem;
+  padding: 1.5rem;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(245, 242, 255, 0.98),
+      rgba(255, 247, 251, 0.98)
+    );
+
+  border: 1px solid rgba(128, 123, 227, 0.16);
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 24px rgba(62, 58, 110, 0.1);
+
+  text-align: center;
+}
+
 /*
-Only the two images inside the MERN project figure
-are changed. Main-page images keep their existing 160px size.
+Keeps your existing image dimensions.
+This rule only removes unwanted margin and stretching.
 */
 
 .mern-project-page figure.card > img {
   display: block;
-
-  width: auto;
-  max-width: 100%;
-
-  height: auto;
-  max-height: 440px;
+  flex: none;
 
   margin: 0 auto;
 
-  object-fit: contain;
-  object-position: center;
-
-  background: #ffffff;
-  border: 1px solid rgba(128, 123, 227, 0.15);
+  border: 1px solid rgba(128, 123, 227, 0.14);
   border-radius: 12px;
 
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+
+  box-shadow:
+    0 8px 20px rgba(40, 35, 85, 0.11);
 }
 
-/* Remove the general card movement on this project figure */
+/* Artist Showcase title at the top */
+
+.mern-project-page figure.card figcaption {
+  order: -1;
+
+  width: 100%;
+  padding: 1rem 1.25rem;
+
+  background: rgba(255, 255, 255, 0.95);
+  border-left: 4px solid var(--accent);
+  border-radius: 10px;
+
+  color: var(--text);
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+/* Stop the whole figure from moving when hovered */
 
 .mern-project-page figure.card:hover {
   transform: none;
-  box-shadow: var(--shadow);
+
+  box-shadow:
+    0 8px 24px rgba(62, 58, 110, 0.1);
 }
 
-/* Project-page sections only */
+/* Description and skills sections */
 
 .mern-project-page section {
   margin-bottom: 1.5rem;
   padding: 1.75rem;
 
-  border: 1px solid rgba(128, 123, 227, 0.12);
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(128, 123, 227, 0.13);
   border-radius: 16px;
 
-  background: rgba(255, 255, 255, 0.94);
+  box-shadow:
+    0 6px 18px rgba(62, 58, 110, 0.08);
+}
+
+.mern-project-page section:last-child {
+  margin-bottom: 0;
 }
 
 .mern-project-page section h2 {
   position: relative;
 
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.55rem;
+
   border-bottom: none;
-  padding-bottom: 0.6rem;
 }
 
 .mern-project-page section h2::after {
@@ -357,39 +478,66 @@ are changed. Main-page images keep their existing 160px size.
   width: 65%;
   height: 3px;
 
-  background: linear-gradient(
-    90deg,
-    var(--accent),
-    #aaa6ff
-  );
+  background:
+    linear-gradient(
+      90deg,
+      var(--accent),
+      #aaa6ff
+    );
 
   border-radius: 999px;
   content: "";
 }
 
 .mern-project-page section p {
+  margin-bottom: 0;
+
   color: var(--muted);
-  line-height: 1.75;
+  line-height: 1.8;
 }
 
-/* Skills on the MERN project page only */
+/* Skills list */
 
 .mern-project-page .skills {
-  gap: 0.7rem;
+  display: grid;
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 0.8rem;
+
+  margin: 0;
   padding: 0;
+
+  list-style: none;
 }
 
 .mern-project-page .skills li {
-  padding: 0.5rem 0.9rem;
+  position: relative;
 
-  background: #f0efff;
-  border: 1px solid rgba(128, 123, 227, 0.15);
+  padding: 0.85rem 1rem 0.85rem 2.25rem;
 
-  color: #5046b1;
-  font-weight: 600;
+  background: #f7f6ff;
+  border: 1px solid rgba(128, 123, 227, 0.14);
+  border-radius: 10px;
+
+  color: #4b4b7e;
+  font-size: 0.92rem;
+  line-height: 1.5;
 }
 
-/* Tablet and mobile */
+.mern-project-page .skills li::before {
+  position: absolute;
+  top: 0.78rem;
+  left: 0.85rem;
+
+  color: var(--accent);
+  content: "✓";
+
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+/* Tablet */
 
 @media (max-width: 800px) {
   .mern-project-page .inf,
@@ -397,39 +545,64 @@ are changed. Main-page images keep their existing 160px size.
     width: calc(100% - 24px);
   }
 
+  .mern-project-page .inf {
+    padding: 1.4rem;
+  }
+
   .mern-project-page .container {
-    padding: 1rem;
+    padding: 1.25rem;
   }
 
   .mern-project-page figure.card {
     padding: 1rem;
-    gap: 1rem;
   }
 
-  .mern-project-page figure.card > img {
-    max-height: 360px;
+  .mern-project-page .skills {
+    grid-template-columns: 1fr;
   }
 }
 
+/* Mobile */
+
 @media (max-width: 500px) {
   .mern-project-page .inf h1 {
-    font-size: 2.35rem;
+    font-size: 2rem;
   }
 
-  .mern-project-page figure.card > img {
-    max-width: 100%;
-    max-height: 280px;
+  .mern-project-page .inf,
+  .mern-project-page .container {
+    width: calc(100% - 16px);
+  }
+
+  .mern-project-page .container {
+    padding: 0.75rem;
+  }
+
+  .mern-project-page figure.card {
+    gap: 1rem;
+    padding: 0.75rem;
   }
 
   .mern-project-page figure.card figcaption {
     padding: 0.85rem 1rem;
-    font-size: 1.05rem;
+    font-size: 1rem;
   }
 
   .mern-project-page section {
     padding: 1.15rem;
   }
-}
 
+  .mern-project-page .skills li {
+    padding:
+      0.75rem
+      0.8rem
+      0.75rem
+      2rem;
+  }
+
+  .mern-project-page .skills li::before {
+    left: 0.7rem;
+  }
+}
 
 
