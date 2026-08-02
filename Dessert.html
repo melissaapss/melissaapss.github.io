@@ -8,66 +8,48 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <meta
-    name="description"
-    content="Artist Showcase, a full-stack MERN application created by Melissa Saap."
-  >
-
-  <title>Artist Showcase — Melissa Saap</title>
+  <title>MERN Stack Website — Melissa Saap</title>
 
   <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body class="mern-project-page">
 
-  <header class="project-header">
-    <a class="back-link" href="index.html">
-      ← Back to Resume
-    </a>
+  <header class="inf">
+    <h1>MERN Stack Website</h1>
 
-    <div class="project-heading">
-      <p class="project-label">Featured Project</p>
-
-      <h1>Artist Showcase</h1>
-
-      <p class="project-type">
-        MERN Stack Website
-      </p>
-
-      <p class="project-intro">
-        An interactive full-stack application with secure authentication,
-        artist management, favorites, and role-based access.
-      </p>
-    </div>
+    <p>
+      <a href="index.html">← Back to Resume</a>
+    </p>
   </header>
 
   <main class="container">
-    <article class="project-page">
+    <article>
 
-      <figure class="project-showcase">
+      <figure class="card mern-showcase">
 
-        <div class="project-image">
-          <span class="image-label">Artist List</span>
+        <figcaption>
+          <strong>Artist Showcase</strong>
+          <span>Interactive full-stack MERN website</span>
+        </figcaption>
+
+        <div class="mern-screenshot">
+          <p class="screenshot-label">User Login and Artist View</p>
 
           <img
             src="images/pic3.jpg"
-            alt="Artist Showcase artist list screen"
+            alt="Screenshot of the Artist Showcase login screen"
           >
         </div>
 
-        <div class="project-image">
-          <span class="image-label">Administrator Dashboard</span>
+        <div class="mern-screenshot">
+          <p class="screenshot-label">Administrator Dashboard</p>
 
           <img
             src="images/pic2.jpg"
-            alt="Artist Showcase administrator dashboard"
+            alt="Screenshot of the Artist Showcase administrator dashboard"
           >
         </div>
-
-        <figcaption>
-          Screens from the Artist Showcase user interface and administrator
-          dashboard.
-        </figcaption>
 
       </figure>
 
@@ -78,74 +60,41 @@
           The Artist Showcase web application is a full-stack MERN project
           that allows users to explore and interact with a collection of
           artists. Users can create accounts, log in securely, browse artist
-          profiles, and mark their favorite artists.
+          profiles, and mark their favorites.
         </p>
 
         <p>
-          Administrators have full control over the platform, including the
-          ability to create, update, and delete artist entries and manage
-          associated data. The application features a responsive interface
-          and a custom-designed visual theme.
+          Administrators have full control over the platform, with the
+          ability to create, update, and delete artist entries, as well as
+          manage associated data. The application features a responsive
+          interface and a custom-designed visual theme.
         </p>
-      </section>
-
-      <section>
-        <h2>Technologies Used</h2>
-
-        <ul class="skills">
-          <li>MongoDB</li>
-          <li>Express.js</li>
-          <li>React</li>
-          <li>Node.js</li>
-          <li>JWT</li>
-          <li>bcrypt</li>
-          <li>CSS3</li>
-          <li>Role-Based Access</li>
-        </ul>
       </section>
 
       <section>
         <h2>Skills Learned</h2>
 
-        <div class="skill-details">
+        <ul class="skills">
+          <li>
+            Developed a full-stack application using MongoDB, Express.js,
+            React, and Node.js
+          </li>
 
-          <div class="skill-item">
-            <h3>Full-Stack Development</h3>
+          <li>
+            Implemented user authentication with JWT and password hashing
+            using bcrypt
+          </li>
 
-            <p>
-              Developed a complete application using MongoDB, Express.js,
-              React, and Node.js.
-            </p>
-          </div>
+          <li>
+            Created a responsive interface with custom CSS styling and
+            animations
+          </li>
 
-          <div class="skill-item">
-            <h3>Secure Authentication</h3>
-
-            <p>
-              Implemented JWT authentication and password hashing with
-              bcrypt.
-            </p>
-          </div>
-
-          <div class="skill-item">
-            <h3>Role-Based Access</h3>
-
-            <p>
-              Created separate permissions and functionality for
-              administrators and standard users.
-            </p>
-          </div>
-
-          <div class="skill-item">
-            <h3>Responsive Design</h3>
-
-            <p>
-              Created a responsive user interface with custom CSS styling
-              and animations.
-            </p>
-          </div>
-
-        </div>
+          <li>
+            Built role-based access control for administrators and standard
+            users
+          </li>
+        </ul>
       </section>
 
     </article>
