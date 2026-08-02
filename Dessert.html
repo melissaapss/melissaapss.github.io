@@ -3,52 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> MERN Stack Website — Melissa Saap </title>
+
+  <meta
+    name="description"
+    content="Artist Showcase, a full-stack MERN website created by Melissa Saap."
+  >
+
+  <title>MERN Stack Website — Melissa Saap</title>
+
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <header class="inf">
-    <h1> MERN Stack Website </h1>
-    <p><a href="index.html">← Back to Resume</a></p>
+  <header class="project-header">
+    <div class="project-header-content">
+      <a class="back-link" href="index.html">← Back to Resume</a>
+
+      <p class="project-label">Featured Project</p>
+      <h1>MERN Stack Website</h1>
+
+      <p class="project-intro">
+        A full-stack Artist Showcase application built with MongoDB,
+        Express.js, React, and Node.js.
+      </p>
+    </div>
   </header>
 
   <main class="container">
-    <article>
-      <figure class="card">
-        <img src="images/pic3.jpg" alt="Screenshot of Login Screen">
-        <img src="images/pic2.jpg" alt="Screenshot of Admin Screen">
-        <figcaption>    MERN Stack Website — Interactive website</figcaption>
+    <article class="project-page">
+
+      <figure class="project-showcase">
+        <div class="project-images">
+          <img
+            src="images/pic3.jpg"
+            alt="Artist Showcase login screen"
+          >
+
+          <img
+            src="images/pic2.jpg"
+            alt="Artist Showcase administrator dashboard"
+          >
+        </div>
+
+        <figcaption>
+          <div>
+            <span class="caption-label">Full-Stack Project</span>
+            <h2>Artist Showcase</h2>
+            <p>
+              An interactive MERN website with secure authentication,
+              artist management, favorites, and role-based access.
+            </p>
+          </div>
+        </figcaption>
       </figure>
 
       <section>
         <h2>Description</h2>
-        <p>The Artist Showcase web application is a full-stack MERN project that allows users to explore and interact with a collection of artists. Users can create accounts, log in securely, and browse artist profiles while marking their favorites. Administrators have full control over the platform, with the ability to create, update, and delete artist entries, as well as manage associated data. The application features a responsive and visually appealing interface with a custom-designed theme, providing both functionality and an engaging user experience.</p>
+
+        <p>
+          The Artist Showcase web application is a full-stack MERN project
+          that allows users to explore and interact with a collection of
+          artists. Users can create accounts, log in securely, browse artist
+          profiles, and mark artists as favorites.
+        </p>
+
+        <p>
+          Administrators have full control over the platform, including the
+          ability to create, update, and delete artist entries and manage
+          associated data. The application also features a responsive
+          interface and a custom-designed visual theme.
+        </p>
       </section>
 
       <section>
-        <h2>Skills Learned</h2>
-        <ul class="skills">
-          <li>Developed a full-stack application using MongoDB, Express.js, React, and Node.j</li>
-          <li>Implemented user authentication with JWT and password hashing using bcrypt</li>
-          <li>Created a responsive UI with custom CSS styling and animations</li>
-          <li>Built role-based access control for admin and standard users</li>
+        <h2>Skills and Technologies</h2>
 
+        <ul class="skills">
+          <li>MongoDB</li>
+          <li>Express.js</li>
+          <li>React</li>
+          <li>Node.js</li>
+          <li>JWT Authentication</li>
+          <li>bcrypt</li>
+          <li>Role-Based Access</li>
+          <li>Responsive CSS</li>
         </ul>
+
+        <div class="skill-details">
+          <div class="skill-item">
+            <h3>Full-Stack Development</h3>
+            <p>
+              Developed a complete application using MongoDB, Express.js,
+              React, and Node.js.
+            </p>
+          </div>
+
+          <div class="skill-item">
+            <h3>Secure Authentication</h3>
+            <p>
+              Implemented JSON Web Tokens and password hashing with bcrypt
+              for secure account access.
+            </p>
+          </div>
+
+          <div class="skill-item">
+            <h3>Access Control</h3>
+            <p>
+              Created separate permissions and functionality for
+              administrators and standard users.
+            </p>
+          </div>
+
+          <div class="skill-item">
+            <h3>Responsive Design</h3>
+            <p>
+              Designed a custom interface that adapts to desktop, tablet,
+              and mobile screen sizes.
+            </p>
+          </div>
+        </div>
       </section>
 
     </article>
   </main>
-
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
