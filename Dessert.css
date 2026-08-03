@@ -670,3 +670,27 @@ img {
     transition-duration: 0.01ms !important;
   }
 }
+
+.showcase-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.showcase-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 6px;
+
+    background: linear-gradient(
+        90deg,
+        #6f67e8,
+        #8a80f2,
+        #f28dc5
+    );
+
+    border-radius: 24px 24px 0 0;
+}
