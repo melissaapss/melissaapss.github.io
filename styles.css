@@ -55,26 +55,33 @@ body {
   line-height: 1.7;
 
   background:
-    radial-gradient(
-      circle at top left,
-      rgba(218, 246, 255, 0.92),
-      transparent 28%
-    ),
-    radial-gradient(
-      circle at top right,
-      rgba(255, 245, 204, 0.92),
-      transparent 28%
-    ),
+    radial-gradient(circle at top left, rgba(218,246,255,.75), transparent 30%),
+    radial-gradient(circle at top right, rgba(255,245,204,.75), transparent 30%),
     linear-gradient(
-      135deg,
-      #f7fcff,
-      #fffdf4,
-      #fff8fb
+      270deg,
+      #FFE8EF,
+      #E3FFE7,
+      #FFECC2,
+      #CFEBFF
     );
 
-  background-attachment: fixed;
+  background-size: 400% 400%;
+  animation: gradientMove 20s ease infinite;
 }
 
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
 a {
   color: inherit;
