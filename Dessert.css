@@ -50,25 +50,31 @@ body {
   color: var(--text);
   line-height: 1.7;
 
-  background:
-    radial-gradient(
-      circle at 5% 5%,
-      rgba(216, 244, 255, 0.9),
-      transparent 32%
-    ),
-    radial-gradient(
-      circle at 94% 4%,
-      rgba(255, 246, 205, 0.9),
-      transparent 32%
-    ),
-    linear-gradient(
-      135deg,
-      #f5fcff,
-      #fffdf3,
-      #fff7fa
-    );
+  background: linear-gradient(
+    270deg,
+    #d8f4ff,
+    #e3ffe7,
+    #fff0bd,
+    #ffe4ef,
+    #e9e5ff
+  );
 
-  background-attachment: fixed;
+  background-size: 500% 500%;
+  animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 
