@@ -2,126 +2,588 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Melissa Saap — Resume</title>
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Portfolio and resume of Melissa Saap, an Information Technology professional and Cybersecurity and Privacy graduate student."
+  >
+
+  <title>Melissa Saap — IT & Cybersecurity Portfolio</title>
+
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  
-  <header class="info">
-    <img src="images/profile.jpg" alt="Portrait of Full Name" class="info-photo">
-    <div class="info-text">
-      <h1><span class="accent">Melissa Saap</span></h1>
-      <p class="subtitle">Aspiring Web Developer • Lifelong Learner</p>
-      <p class="contact">
-        <a href="mailto:melissaaps09@gmail.com">melissaaps09@gmail.com</a> ·
-        <a href="https://www.linkedin.com/in/melissa-saap-445420251/" target="_blank" rel="noopener">LinkedIn</a>
-      </p>
-    </div>
+
+  <header class="site-header">
+    <a class="brand" href="#top">MS</a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+    </nav>
+
+    <a class="header-contact" href="mailto:melissaaps09@gmail.com">
+      Contact Me
+    </a>
   </header>
 
-<nav class="main-nav">
-  <a href="index.html" aria-current="page">Resume</a>
-  <a href="Dessert.html">MERN Stack Website</a>
-  <a href="sql.html">SQL Database</a>
-</nav>
+  <main id="top">
 
-<main class="container">
-  <section>
-    <h2>Objective</h2>
-    <p>Aspiring IT professional eager to contribute my knowledge in system support, cybersecurity , and user assistance while expanding my skills in a fast-paced environment.</p>
-  </section>
+    <!-- Hero -->
 
-  <section> 
-    <h2>Education</h2> 
-      <p><strong>University of Central Florida</strong> — M.S Cybersecurity and Privacy, December 2027</p> 
-      <p><strong>University of Central Florida</strong> — B.S. Information Technology, May 2026</p> 
-      <p><strong>University of Central Florida</strong> — Minor Secure Computing and Networks, May 2026</p> 
-      <p>Relevant Coursework: Web Based Technology, System Admin and Maintenance, Design and Implementation of Networks, Secure operating systems, Network Security and privacy, Security in Computing, Cryptography, Computer Networks, Object Oriented programning, Database Concepts, Computer Science I</p> </section>
+    <section class="hero">
+      <div class="hero-content">
 
-  <section>
-    <h2>Job Experience</h2>
-    <p><strong>Receptionist – Rielo Dental Clinic</strong> May 2023 - Aug 2025</p>
-    <ul>
-      <li>Scheduled and confirmed appointments for new and old patients seeking treatment.</li>
-      <li>Checked patients out and accepted the appropriate payment.</li>
-      <li>Verified patients insurance.</li>
-      <li>Managed patients in the waiting area.</li>
-      <li>Answered phone calls from patients and took messages from insurance providers.</li>
-      <li>Entered and scanned all patient information into the system.</li>
-    </ul>
-    
-    <p><strong>Receptionist – La Edad Prodigiosa</strong> May 2020 - May 2023</p>
-    <ul>
-      <li>Assisted company with healthcare provider relations such as Molina Healthcare, Sunshine Health, etc</li>
-      <li>Created folders for aforementioned providers.</li>
-      <li>Verified patients insurance.</li>
-      <li>Redesigned templates for documents to maintain an organized environment. </li>
-      <li>Answered phone calls and handled the scheduling of meetings.</li>
-    </ul>
-    
-  </section>
+        <p class="eyebrow">IT • Cybersecurity • Development</p>
 
-  <section>
-    <h2>Projects</h2>
-    <div class="project-cards">
-      <a href="Dessert.html" class="card">
-        <img src="images/pic.jpg" alt="Preview of MERN Stack Website">
-        <h3>MERN Stack Website</h3>
-        <p>Interactive website made for people to log their favorite artists. </p>
-      </a>
-      <a href="sql.html" class="card">
-        <img src="images/sqldata1.jpg" alt="Preview of SQL Database">
-        <h3>SQL Database</h3>
-        <p>SQL Database that manages a fake airline.</p>
-      </a>
+        <h1>
+          Hi, I’m
+          <span>Melissa Saap.</span>
+        </h1>
+
+        <p class="hero-title">
+          Information Technology graduate and Cybersecurity and Privacy
+          master’s student.
+        </p>
+
+        <p class="hero-summary">
+          I build web applications, databases, and workflow automation tools
+          that solve practical business problems and improve operational
+          efficiency.
+        </p>
+
+        <div class="hero-actions">
+          <a class="primary-button" href="#projects">
+            View My Projects
+          </a>
+
+          <a
+            class="secondary-button"
+            href="mailto:melissaaps09@gmail.com"
+          >
+            Email Me
+          </a>
+        </div>
+
+        <div class="hero-links">
+          <a href="tel:+17867741835">786-774-1835</a>
+
+          <span aria-hidden="true">•</span>
+
+          <a
+            href="https://www.linkedin.com/in/melissa-saap-445420251/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+
+          <span aria-hidden="true">•</span>
+
+          <a
+            href="https://melissaapss.github.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Portfolio
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="profile-frame">
+          <img
+            src="images/profile.jpg"
+            alt="Portrait of Melissa Saap"
+          >
+        </div>
+
+        <div class="floating-card floating-card-top">
+          <span class="floating-icon">&lt;/&gt;</span>
+
+          <div>
+            <strong>Full-Stack Development</strong>
+            <small>MERN • JavaScript • APIs</small>
+          </div>
+        </div>
+
+        <div class="floating-card floating-card-bottom">
+          <span class="floating-icon">⌁</span>
+
+          <div>
+            <strong>Cybersecurity</strong>
+            <small>Secure systems and networks</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick facts -->
+
+    <section class="quick-facts" aria-label="Professional highlights">
+
+      <article>
+        <strong>2026</strong>
+        <span>B.S. Information Technology</span>
+      </article>
+
+      <article>
+        <strong>2027</strong>
+        <span>M.S. Cybersecurity & Privacy</span>
+      </article>
+
+      <article>
+        <strong>3+</strong>
+        <span>Technical portfolio projects</span>
+      </article>
+
+      <article>
+        <strong>Bilingual</strong>
+        <span>English and Spanish</span>
+      </article>
+
+    </section>
+
+    <div class="page-container">
+
+      <!-- About -->
+
+      <section id="about" class="section-card about-section">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">Professional Profile</p>
+            <h2>About Me</h2>
+          </div>
+
+          <span class="section-number">01</span>
+        </div>
+
+        <div class="about-grid">
+          <p class="about-lead">
+            I combine technical development skills with hands-on
+            administrative and healthcare operations experience.
+          </p>
+
+          <div class="about-copy">
+            <p>
+              My background includes full-stack development, SQL database
+              design, browser-extension development, responsive interfaces,
+              and workflow automation.
+            </p>
+
+            <p>
+              At Better Care PPEC, I created a Chrome extension that automated
+              transportation billing, reducing a process that previously took
+              several hours to only minutes while improving accuracy.
+            </p>
+
+            <p>
+              I am interested in opportunities involving cybersecurity,
+              software development, IT support, systems administration, and
+              technical operations.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+
+      <section id="skills" class="section-card">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">Technical Expertise</p>
+            <h2>Skills & Technologies</h2>
+          </div>
+
+          <span class="section-number">02</span>
+        </div>
+
+        <div class="skill-category-grid">
+
+          <article class="skill-category">
+            <span class="category-number">01</span>
+            <h3>Languages & Databases</h3>
+
+            <ul>
+              <li>JavaScript ES6+</li>
+              <li>Python</li>
+              <li>Java</li>
+              <li>C</li>
+              <li>SQL</li>
+              <li>MongoDB</li>
+              <li>MySQL</li>
+            </ul>
+          </article>
+
+          <article class="skill-category">
+            <span class="category-number">02</span>
+            <h3>Web Development</h3>
+
+            <ul>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>React</li>
+              <li>Node.js</li>
+              <li>Express.js</li>
+              <li>REST APIs</li>
+              <li>Responsive Design</li>
+            </ul>
+          </article>
+
+          <article class="skill-category">
+            <span class="category-number">03</span>
+            <h3>Tools & Concepts</h3>
+
+            <ul>
+              <li>Chrome Extension APIs</li>
+              <li>GitHub</li>
+              <li>Workflow Automation</li>
+              <li>Database Design</li>
+              <li>Authentication</li>
+              <li>Role-Based Access</li>
+              <li>Fluent Spanish</li>
+            </ul>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Projects -->
+
+      <section id="projects" class="section-card projects-section">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">Selected Work</p>
+            <h2>Featured Projects</h2>
+          </div>
+
+          <span class="section-number">03</span>
+        </div>
+
+        <div class="featured-project">
+
+          <div class="featured-project-content">
+            <p class="project-label">Automation Project</p>
+
+            <h3>Transportation Billing Chrome Extension</h3>
+
+            <p>
+              A browser extension designed to automate transportation billing
+              for pediatric healthcare and adult day care operations.
+            </p>
+
+            <ul>
+              <li>Extracts trip information from a web platform</li>
+              <li>Validates and formats transportation data</li>
+              <li>Prepares billing information automatically</li>
+              <li>Reduced processing time from hours to minutes</li>
+            </ul>
+
+            <div class="technology-tags">
+              <span>JavaScript</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>Chrome APIs</span>
+            </div>
+          </div>
+
+          <div class="automation-visual">
+            <div class="browser-window">
+              <div class="browser-bar">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+
+              <div class="browser-content">
+                <p>Transportation Billing</p>
+
+                <div class="browser-row"></div>
+                <div class="browser-row short"></div>
+                <div class="browser-row"></div>
+
+                <button type="button">
+                  Process Trips
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="project-grid">
+
+          <a class="project-card" href="Dessert.html">
+            <div class="project-image">
+              <img
+                src="images/pic.jpg"
+                alt="Artist Showcase MERN application preview"
+              >
+            </div>
+
+            <div class="project-card-content">
+              <p class="project-label">Full-Stack Application</p>
+
+              <h3>Artist Showcase</h3>
+
+              <p>
+                A MERN web application with authentication, CRUD operations,
+                artist management, and role-based access.
+              </p>
+
+              <div class="technology-tags">
+                <span>MongoDB</span>
+                <span>Express</span>
+                <span>React</span>
+                <span>Node.js</span>
+              </div>
+
+              <span class="view-project">View Project →</span>
+            </div>
+          </a>
+
+          <a class="project-card" href="sql.html">
+            <div class="project-image">
+              <img
+                src="images/sqldata1.jpg"
+                alt="Airline SQL database preview"
+              >
+            </div>
+
+            <div class="project-card-content">
+              <p class="project-label">Database Project</p>
+
+              <h3>Airline SQL Database</h3>
+
+              <p>
+                A relational database for managing flights, passengers,
+                bookings, aircraft, airports, and employees.
+              </p>
+
+              <div class="technology-tags">
+                <span>SQL</span>
+                <span>MySQL</span>
+                <span>Joins</span>
+                <span>Normalization</span>
+              </div>
+
+              <span class="view-project">View Project →</span>
+            </div>
+          </a>
+
+          <a
+            class="project-card"
+            href="https://melissaapss.github.io/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="portfolio-preview">
+              <span>MS</span>
+            </div>
+
+            <div class="project-card-content">
+              <p class="project-label">Web Development</p>
+
+              <h3>Personal Portfolio</h3>
+
+              <p>
+                A responsive portfolio website created to showcase projects,
+                technical skills, education, and professional experience.
+              </p>
+
+              <div class="technology-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
+
+              <span class="view-project">Visit Website →</span>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- Experience -->
+
+      <section id="experience" class="section-card">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">Professional Background</p>
+            <h2>Experience</h2>
+          </div>
+
+          <span class="section-number">04</span>
+        </div>
+
+        <article class="timeline-item">
+          <div class="timeline-date">
+            <span>2023</span>
+            <span>2026</span>
+          </div>
+
+          <div class="timeline-marker"></div>
+
+          <div class="timeline-content">
+            <p class="company">Better Care PPEC</p>
+
+            <h3>Administrative Assistant</h3>
+
+            <p class="date-mobile">
+              August 2023 – August 2026
+            </p>
+
+            <ul>
+              <li>
+                Supported daily operations in a pediatric healthcare facility
+                serving multiple providers.
+              </li>
+
+              <li>
+                Coordinated communication and scheduling between staff,
+                families, and healthcare providers.
+              </li>
+
+              <li>
+                Maintained electronic records while supporting confidentiality
+                and regulatory compliance.
+              </li>
+
+              <li>
+                Redesigned documentation and administrative workflows for
+                improved consistency and efficiency.
+              </li>
+
+              <li>
+                Developed a Chrome extension that automated transportation
+                billing and reduced manual work.
+              </li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <!-- Education -->
+
+      <section id="education" class="section-card">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">Academic Background</p>
+            <h2>Education</h2>
+          </div>
+
+          <span class="section-number">05</span>
+        </div>
+
+        <div class="education-grid">
+
+          <article class="education-card">
+            <p class="education-status">Graduate Program</p>
+
+            <h3>Master of Science</h3>
+
+            <p class="degree">
+              Cybersecurity and Privacy
+            </p>
+
+            <p class="school">
+              University of Central Florida
+            </p>
+
+            <p class="education-date">
+              August 2026 – December 2027
+            </p>
+          </article>
+
+          <article class="education-card">
+            <p class="education-status">Bachelor’s Degree</p>
+
+            <h3>Bachelor of Science</h3>
+
+            <p class="degree">
+              Information Technology
+            </p>
+
+            <p class="school">
+              University of Central Florida
+            </p>
+
+            <p class="education-date">
+              July 2022 – May 2026
+            </p>
+          </article>
+
+          <article class="education-card">
+            <p class="education-status">Academic Minor</p>
+
+            <h3>Minor</h3>
+
+            <p class="degree">
+              Secure Computing and Networks
+            </p>
+
+            <p class="school">
+              University of Central Florida
+            </p>
+
+            <p class="education-date">
+              July 2022 – May 2026
+            </p>
+          </article>
+
+        </div>
+      </section>
+
     </div>
-  </section>
-
-  <section>
-    <h2>Skills</h2>
-    <ul class="skills">
-      <li>Python</li>
-      <li>Java</li>
-      <li>C</li>
-      <li>HTML/CSS</li>
-      <li>AutoCad</li>
-      <li>Fluent in Spanish</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Awards and Certifications</h2>
-    <ul>
-      <li>Dean’s List</li>
-      <li>Arduino Certification</li>
-      <li>REC Foundations Certification</li>
-    </ul>
-  </section>
-</main>
+  </main>
 
   <footer>
-    <p>© <span id="yr"></span> Melissa Saap • <a href="https://github.com/YOURUSERNAME">GitHub</a></p>
+    <div>
+      <strong>Melissa Saap</strong>
+      <p>IT • Cybersecurity • Software Development</p>
+    </div>
+
+    <p>
+      © <span id="year"></span> Melissa Saap
+    </p>
+
+    <div class="footer-links">
+      <a href="mailto:melissaaps09@gmail.com">Email</a>
+
+      <a
+        href="https://www.linkedin.com/in/melissa-saap-445420251/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LinkedIn
+      </a>
+
+      <a
+        href="https://melissaapss.github.io/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Portfolio
+      </a>
+    </div>
   </footer>
 
   <script>
-    document.getElementById('yr').textContent = new Date().getFullYear();
+    const year = document.getElementById("year");
+
+    if (year) {
+      year.textContent = new Date().getFullYear();
+    }
   </script>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
