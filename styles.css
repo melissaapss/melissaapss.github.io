@@ -1325,3 +1325,42 @@ body {
   padding-top: 3rem;
   border-top: 1px solid var(--border);
 }
+/* Clickable featured Transportation project */
+
+.featured-project-link {
+  color: var(--white);
+  text-decoration: none;
+  cursor: pointer;
+
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
+}
+
+.featured-project-link:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 24px 55px rgba(42, 39, 75, 0.22);
+}
+
+.featured-project-link:focus-visible {
+  outline: 3px solid #ffd54d;
+  outline-offset: 4px;
+}
+
+/* Keeps the generic Process Trips button appearance */
+
+.browser-demo-button {
+  display: inline-block;
+
+  margin-top: 12px;
+  padding: 9px 14px;
+
+  background: var(--accent);
+  border-radius: 8px;
+
+  color: var(--white);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
