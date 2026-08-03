@@ -15,216 +15,224 @@
 
   <title>MERN Stack Website — Melissa Saap</title>
 
-  <!-- Use a separate stylesheet for this page -->
-  <link rel="stylesheet" href="dessert.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body class="mern-project-page">
 
-  <header class="project-hero">
-    <div class="hero-container">
+  <header class="mern-hero">
 
-      <a class="back-link" href="index.html">
-        ← Back to Resume
-      </a>
+    <a class="mern-back-link" href="index.html">
+      ← Back to Resume
+    </a>
 
-      <p class="eyebrow">Featured Project</p>
+    <div class="mern-hero-content">
+
+      <p class="mern-project-label">
+        Featured Project
+      </p>
 
       <h1>MERN Stack Website</h1>
 
-      <p class="hero-description">
-        A full-stack Artist Showcase application with secure authentication,
-        artist management, favorites, and role-based access.
+      <p class="mern-hero-subtitle">
+        A full-stack Artist Showcase application built with MongoDB,
+        Express.js, React, and Node.js.
       </p>
 
-      <ul class="technology-list" aria-label="Technologies used">
-        <li>MongoDB</li>
-        <li>Express.js</li>
-        <li>React</li>
-        <li>Node.js</li>
-        <li>JWT</li>
-        <li>bcrypt</li>
-      </ul>
+      <div class="tech-stack" aria-label="Technologies used">
+        <span>MongoDB</span>
+        <span>Express.js</span>
+        <span>React</span>
+        <span>Node.js</span>
+        <span>JWT</span>
+        <span>bcrypt</span>
+      </div>
 
     </div>
   </header>
 
-  <main class="page-container">
+  <main class="container mern-container">
 
-    <section class="showcase-section">
+    <article>
 
-      <div class="showcase-heading">
-        <div>
-          <p class="section-label">Project Preview</p>
-          <h2>Artist Showcase</h2>
-        </div>
+      <figure class="card mern-showcase">
 
-        <p>
-          A responsive web application for exploring and managing artist
-          information.
-        </p>
-      </div>
+        <figcaption>
+          <div>
+            <p class="showcase-label">Project Preview</p>
+            <h2>Artist Showcase</h2>
 
-      <div class="screenshot-grid">
+            <p>
+              Interactive full-stack MERN website with secure authentication,
+              artist management, favorites, and role-based access.
+            </p>
+          </div>
+        </figcaption>
 
-        <article class="screenshot-card">
+        <div class="mern-screenshot">
 
-          <div class="screenshot-card-heading">
-            <span class="number">01</span>
+          <div class="screenshot-heading">
+            <span class="screenshot-number">01</span>
 
             <div>
-              <h3>User Artist View</h3>
-              <p>Browse artists and manage favorites.</p>
+              <h3>User Login and Artist View</h3>
+              <p>Browse artists and access a secure user account.</p>
             </div>
           </div>
 
-          <div class="image-wrapper">
-            <img
-              src="images/pic3.jpg"
-              alt="Artist Showcase user artist view"
-            >
-          </div>
+          <img
+            src="images/pic3.jpg"
+            alt="Artist Showcase user login and artist list screen"
+          >
 
-        </article>
+        </div>
 
-        <article class="screenshot-card">
+        <div class="mern-screenshot">
 
-          <div class="screenshot-card-heading">
-            <span class="number">02</span>
+          <div class="screenshot-heading">
+            <span class="screenshot-number">02</span>
 
             <div>
-              <h3>Admin Dashboard</h3>
-              <p>Create and manage artist information.</p>
+              <h3>Administrator Dashboard</h3>
+              <p>Create, update, and manage artist information.</p>
             </div>
           </div>
 
-          <div class="image-wrapper">
-            <img
-              src="images/pic2.jpg"
-              alt="Artist Showcase administrator dashboard"
-            >
-          </div>
+          <img
+            src="images/pic2.jpg"
+            alt="Artist Showcase administrator dashboard"
+          >
 
-        </article>
-
-      </div>
-
-    </section>
-
-    <section class="content-section">
-
-      <div class="section-title">
-        <span class="section-number">01</span>
-
-        <div>
-          <p class="section-label">Project Overview</p>
-          <h2>Description</h2>
-        </div>
-      </div>
-
-      <div class="description-layout">
-
-        <div class="description-text">
-          <p>
-            The Artist Showcase web application is a full-stack MERN project
-            that allows users to explore and interact with a collection of
-            artists. Users can create accounts, log in securely, browse artist
-            profiles, and mark their favorite artists.
-          </p>
-
-          <p>
-            Administrators can create, update, and delete artist entries while
-            managing related information through a dedicated dashboard. The
-            application includes a responsive interface and a custom visual
-            theme.
-          </p>
         </div>
 
-        <aside class="highlights-card">
-          <h3>Project Highlights</h3>
+      </figure>
 
-          <ul>
-            <li>Secure JWT authentication</li>
-            <li>Password hashing with bcrypt</li>
-            <li>Artist favorites system</li>
-            <li>Administrative CRUD dashboard</li>
-            <li>Role-based permissions</li>
-            <li>Responsive user interface</li>
-          </ul>
-        </aside>
+      <section class="mern-content-section description-section">
 
-      </div>
+        <div class="section-heading">
 
-    </section>
+          <span class="section-icon" aria-hidden="true">✦</span>
 
-    <section class="content-section">
+          <div>
+            <p class="section-eyebrow">Project Overview</p>
+            <h2>Description</h2>
+          </div>
 
-      <div class="section-title">
-        <span class="section-number">02</span>
-
-        <div>
-          <p class="section-label">Development Experience</p>
-          <h2>Skills Learned</h2>
         </div>
-      </div>
 
-      <div class="skills-grid">
+        <div class="description-grid">
 
-        <article class="skill-card">
-          <span class="skill-icon">01</span>
+          <div class="description-copy">
 
-          <div>
-            <h3>Full-Stack Development</h3>
+            <h3>Overview</h3>
 
             <p>
-              Built a complete application using MongoDB, Express.js, React,
-              and Node.js.
+              The Artist Showcase web application is a full-stack MERN
+              project that allows users to explore and interact with a
+              collection of artists. Users can create accounts, log in
+              securely, browse artist profiles, and mark artists as
+              favorites.
             </p>
-          </div>
-        </article>
-
-        <article class="skill-card">
-          <span class="skill-icon">02</span>
-
-          <div>
-            <h3>Secure Authentication</h3>
 
             <p>
-              Implemented JWT authentication and secure password hashing with
-              bcrypt.
+              Administrators have full control over the platform, including
+              the ability to create, update, and delete artist entries and
+              manage associated data.
             </p>
-          </div>
-        </article>
 
-        <article class="skill-card">
-          <span class="skill-icon">03</span>
+          </div>
+
+          <aside class="project-highlights">
+
+            <h3>Project Highlights</h3>
+
+            <ul>
+              <li>Secure JWT authentication</li>
+              <li>Encrypted passwords using bcrypt</li>
+              <li>Artist favorites system</li>
+              <li>Administrative CRUD dashboard</li>
+              <li>Role-based user permissions</li>
+              <li>Responsive custom interface</li>
+            </ul>
+
+          </aside>
+
+        </div>
+
+      </section>
+
+      <section class="mern-content-section skills-section">
+
+        <div class="section-heading">
+
+          <span class="section-icon" aria-hidden="true">⚡</span>
 
           <div>
-            <h3>Responsive Design</h3>
-
-            <p>
-              Created a responsive interface with custom CSS and subtle
-              animations.
-            </p>
+            <p class="section-eyebrow">Development Experience</p>
+            <h2>Skills Learned</h2>
           </div>
-        </article>
 
-        <article class="skill-card">
-          <span class="skill-icon">04</span>
+        </div>
 
-          <div>
-            <h3>Role-Based Access</h3>
+        <ul class="skills mern-skills">
 
-            <p>
-              Developed separate permissions for administrators and standard
-              users.
-            </p>
-          </div>
-        </article>
+          <li>
+            <span class="skill-number">01</span>
 
-      </div>
+            <div>
+              <h3>Full-Stack Development</h3>
 
-    </section>
+              <p>
+                Developed a complete application using MongoDB, Express.js,
+                React, and Node.js.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <span class="skill-number">02</span>
+
+            <div>
+              <h3>Secure Authentication</h3>
+
+              <p>
+                Implemented JWT authentication and password hashing with
+                bcrypt.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <span class="skill-number">03</span>
+
+            <div>
+              <h3>Responsive Interface</h3>
+
+              <p>
+                Created a responsive user interface with custom CSS styling
+                and animations.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <span class="skill-number">04</span>
+
+            <div>
+              <h3>Role-Based Access</h3>
+
+              <p>
+                Built separate permissions for administrators and standard
+                users.
+              </p>
+            </div>
+          </li>
+
+        </ul>
+
+      </section>
+
+    </article>
 
   </main>
 
